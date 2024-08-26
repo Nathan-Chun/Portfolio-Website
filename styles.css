@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+*{
+    font-family: 'Lato',sans-serif;
+    padding: 0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+/*For smoother scrolling*/
+html{
+    scroll-behavior:smooth;
+}
+
+h1,h2,h3,h4,h5,h6,span{
+    color: #242424;
+    text-align: center;
+    line-height: 1.25;
+}
+
+h1{
+    font-size: 36px;
+}
+
+p{
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+a{
+    text-decoration: none;
+    position: relative;
+    transition: opacity 300ms ease;
+}
+i:hover{
+    opacity: 0.7;
+}
+
+.link__hover-effect:after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    background-color: black;
+    bottom: -3px;
+    right: 0;
+    transition: all 300ms ease;
+}
+
+.link__hover-effect:hover:after{
+    width: 100%;
+    left:0;
+}
+
+.link__hover-effect--white:after{
+    background-color: #ffff;
+}
+
+.link__hover-effect--black:after{
+    background-color: #000;
+}
+
+.link__hover-effect:hover:after{
+    width: 100%;
+    left: 0;
+}
+
+li{
+    list-style-type: none;
+}
+
+.flex{
+    display:flex;
+}
+
+.flex-1{
+    flex:1;
+}
+
+.container{
+    padding: 50px 0;
+}
+
+.row{
+    width: 100%;
+    max-width:800px;
+    margin:0 auto;
+    padding: 0 12px;
+}
+
+.text--color{
+    color: #634832;
+}
+
+/*Section background colors*/
+section:nth-child(even){
+    background-color: #f8f8f8;
+}
+
+.section__title{
+    margin-bottom: 20px;
+}
+
+/* Navigation bar */
+
+nav {
+    height: 100px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto; /* Center */
+    display: flex; /* position */
+    justify-content:space-between; /* center to both sides of page */
+    align-items: center; /* center vertically */
+    padding: 0 12px;
+}
+
+.nav__link--list{
+    display: flex;
+
+}
+.nav__link--anchor{
+    margin: 0 12px;
+    color: #242424;
+    font-weight:700;
+}
+
+.nav__link--anchor-primary{
+    background-color: #634832;
+    padding: 8px 20px;
+    border-radius: 50px;
+    color: white;
+
+}
+
+.nav__link--anchor-primary:hover{
+    background-color: #967259;
+    
+}
+
+.personal__logo{
+    font-size: 24px;
+    color: #6030b1;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+/*About me*/
+#about-me{
+    min-height:100vh;
+    display: flex;
+    flex-direction:column;
+}
+
+.about-me__info{
+    display: flex;
+    flex-direction:column;
+}
+
+.about-me__info--container{
+    display:flex;
+    flex-direction: column; /*Prevents pic and text from being side by side*/
+    /*justify-content:center;*/
+    align-items: center; /*Align pic with text center*/
+    max-width:500px;
+    margin: 0 auto; /*Center*/
+    text-align: center;/*Center text with all items in container*/
+}
+
+.about-me__picture--mask{
+    width:100px;
+    height:100px;
+    border-radius: 500%;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0,0,0,1); /*Add shadwing and blurring around picture*/
+    margin-bottom: 28px; /*Add space under pic*/
+    /* 200ms backwards waits 200ms before animation starts, backwards is needed so the picture doesn't show at first */
+    animation: animate-profile-picture 800ms 200ms backwards; 
+}
+
+@keyframes animate-profile-picture{
+    0%{
+        transform: scale(0);
+    }
+    80%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.about-me__picture{
+    width: 100%;
+    /*improving the picture*/
+    transform: scale(1.25); /*For zooming in*/
+    padding-bottom:10px; /*for shifting image up*/
+}
+
+.about-me__info--title{
+    margin-bottom: 16px; /*Add space below title block*/
+    animation: fade-up 650ms 400ms backwards;
+}
+
+.about-me__info--para{
+    font-size: 20px;
+    margin-bottom:28px;
+    animation: fade-up 650ms 400ms backwards;
+}
+
+.about-me__link{
+    font-size: 20px;
+    color: #242424;
+    padding: 0 20px; /*Space them out*/
+}
+
+.about-me__links{
+    animation: fade-up 650ms 800ms backwards;
+}
+
+@keyframes fade-up{
+    0%{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-me__img--container{
+    flex:1; /*Img takes up equal space as other items in container*/
+    display:flex; 
+    align-items: center;
+}
+
+.about-me__img{
+    width: 90%; /*Prevent img from going past confines of parent*/
+    animation: fade-in 1200ms 800ms backwards;
+}
+
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* To animate a hand waving */
+.wave{
+    animation: animate-wave 500ms infinite ease-in-out;
+    /* won't rotate unless have display inline block */
+    display: inline-block; 
+}
+
+@keyframes animate-wave{
+    0%{
+        transform: rotate(0);
+    }
+    50%{
+        transform: rotate(30deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+
+}
+/*  */
+/*Tech stack*/
+
+.language__img{
+    width:100%;
+    max-width: 100px; /*Resize icon*/
+    transition: all 300ms;
+}
+
+.language:hover .language__img:hover{ /*Must have hover part so that effects only happen when hovered on icon, not around it*/
+    filter: brightness (80%);
+    opacity:0.86;
+    transform:scale(0.9);
+}
+
+.language{
+    width:25%;
+    display: flex;
+    justify-content:center;
+    position: relative; /*position the labels of languages relative to icons*/
+}
+
+.language__img--wrapper{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    padding: 25px 16px;
+}
+
+.language__list{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.language__name{
+    font-size: 20px;
+    position: absolute;
+    bottom: 0;
+    transform: scale(0);
+    opacity:0;
+}
+
+.language:hover .language__name{
+    transform: scale(1);
+    opacity: 1;
+}
+
+/*Projects*/
+.project{
+    margin-bottom: 135px;
+
+}
+.project:last-child{
+    margin-bottom: 40px;
+}
+
+.project__img{
+    width:100%;
+    transition: all 500ms ease;
+}
+
+.project__wrapper{
+    box-shadow:0 20px 80px rgba(0,0,0,0.45);
+    border-radius: 20px;
+    overflow:hidden;
+    display:flex;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.project__wrapper:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left:0;
+    height:100%;
+    width:100%;
+    background-color: #1c1d25;
+    opacity: 0;
+    transition: opacity 450ms ease;
+    z-index:2;
+}
+
+.project:hover .project__wrapper:before{
+    opacity: 0.7;
+}
+
+.project:hover .project__img{
+    transform: scale(1.07);
+    filter: blur(5px);
+}
+
+.project:hover .project__description{
+    opacity: 1;
+    transform: translateY(-50%);
+}
+
+.project_list{
+    padding-top: 40px;
+}
+
+.project__description{
+    position: absolute;
+    top: 50%;
+    left: 90px;
+    transform: translateY(100%);
+    max-width:550px;
+    z-index:3;
+    opacity: 0;
+    transition: transform 450ms, opacity 450ms;
+}
+
+.project__description--title{
+    font-size: 40px;
+}
+
+.project__description--para{
+    margin: 16px 0;
+}
+
+.project__description__link{
+    font-size:20px;
+    margin-right: 16px;
+}
+
+.project__description--title,
+.project__description--sub-title,
+.project__description--para,
+.project__description--link{
+    text-align: left;
+    color: #fff;
+}
+
+/*Footer*/
+
+footer{
+    background-color:#242424;
+}
+
+.footer__social--list{
+    width: 100%;
+    display:flex;
+    max-width:500px;
+    justify-content: space-around;
+    margin-bottom:20px;
+}
+
+.footer__row{
+    /*Make sure footer adjusts to window size*/
+    padding: 8% 0;
+    display:flex;
+    flex-direction:column; /*If this is row, then justify-content: center centers it horizontally instead of vertically*/
+    align-items:center;
+    justify-content: center;
+}
+
+.footer__logo--img{
+    width: 100px;
+    height:100px;
+
+}
+
+.footer__social--link,
+.footer__logo--popper
+{
+    color: #fff
+}
+
+.footer__logo--popper{
+    position: absolute; /*So the pop up won't affect formatting of other items*/
+    right: 0;
+    top: 30px;
+    font-weight: 700;
+    opacity: 0;
+    transition: all 300ms ease;
+}
+
+.footer__anchor{
+    position: relative; /*Have the margin on the parent, not the icon*/
+    margin-bottom: 20px;
+}
+
+.footer__anchor:hover .footer__logo--popper{
+    transform: translateX(60px);
+    opacity: 1;
+}
+
+/* phone, tablet compatibility */
+@media(max-width: 768){
+    nav{
+        height: 68px;
+
+    }
+
+    h1{
+        font-size: 28px;
+    }
+
+    .about-me__info--para{
+        font-size: 18px;
+    }
+
+    .language{
+        width: calc(100%/2);
+    }
+
+    .project__description--para{
+        font-size: 14px,
+    }
+
+    .project__description{
+        left: 30px;
+        padding-right: 30px;
+    }
+}
+
+/*Small Phones compatability*/
+@media  (max-width: 480px){
+    .nav__link:not(:last-child){
+        display:none;
+    }
+
+    .project__description{
+        padding: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .project__description--para{
+        display:none;
+    }
+
+    .project__description--links{
+        display: flex;
+        justify-content: center;
+    }
+
+    .project__description--title{
+        font-size: 32px;
+        line-height: 1;
+        text-align: center;
+    }
+
+    .project__description--sub-title{
+        text-align: center;
+        margin: 12px 0;
+    }
+}

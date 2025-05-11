@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 *{
-    font-family: Lato, sans-serif;
+    font-family: Open Sans, sans-serif;
     padding: 0;
     margin:0;
     box-sizing:border-box;
@@ -125,7 +125,7 @@ nav {
 .nav__link--anchor{
     margin: 0 12px;
     color: #242424;
-    font-weight:700;
+    /* font-weight:700; */
 }
 
 .nav__link--anchor-primary{
@@ -145,7 +145,7 @@ nav {
     font-size: 24px;
     /* color: #6030b1; */
     /* margin: 0 12px; */
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 /*About me*/
@@ -321,6 +321,10 @@ nav {
 }
 
 /*Projects*/
+#projects {
+    flex: 1; /* Allows the section to grow and fill available space */
+}
+
 .project{
     margin-bottom: 135px;
     background-color: white
@@ -337,9 +341,15 @@ nav {
 .project__title{
     background-color: rgba(202, 182, 155, 0.45);
     width: 100%;
-    padding: 20px 0;
+    padding: 10px 0px;
     text-align: center;
     box-sizing: border-box;
+}
+.project-title{
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 16px;
+    color:#242424;
 }
 
 .project__description{
@@ -442,6 +452,7 @@ nav {
     color:#242424;
 }
 
+
 body {
     display: flex;
     flex-direction: column;
@@ -453,7 +464,7 @@ body {
 
 
 footer{
-    margin-top: auto;
+    margin-top: 20px;
     background-color:#242424;
 }
 
@@ -462,12 +473,12 @@ footer{
     display:flex;
     max-width:500px;
     justify-content: space-around;
-    margin-bottom:20px;
+    margin-bottom:10px;
 }
 
 .footer__row{
     /*Make sure footer adjusts to window size*/
-    padding: 2% 0;
+    padding: 0.5% 0;
     display:flex;
     flex-direction:column; /*If this is row, then justify-content: center centers it horizontally instead of vertically*/
     align-items:center;
@@ -475,8 +486,8 @@ footer{
 }
 
 .footer__logo--img{
-    width: 100px;
-    height:100px;
+    width: 80px;
+    height:80px;
 
 }
 

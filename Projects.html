@@ -24,6 +24,7 @@
                     nav__link--anchor
                     link__hover-effect
                     link__hover-effect--black
+                    nav__link--current
                 ">Projects</a>
             </li>
             <li class="nav__link">
@@ -49,31 +50,123 @@
         </ul>
     </nav>
 
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero__content">
+            
+            <p class="pdf-title">Projects</p>
+            <img src="./Professional Photos/projects_title_img.jpg" alt="Projects" class="hero__img">
+            <!-- <div class = "hero__caption">
+                HECTOR v2 in the Mojave Desert.
+            </div> -->
+        </div>
+    </header>
 
-    <section id="projects">
-        <!-- <div class="title_block"></div> -->
+  <!-- Projects List -->
+    <section class="content-list">
+        <div class="content-item">
+            <div class="content-item-title">Introduction</div>
+                <div class="content-item-inner">
+                <!-- <img src="./Professional Photos/Gripper.png" alt="Robot Gripper"> -->
+                <div class="content-item-content">
+                    <div class="content-item-desc">
+                        Learning to engineer without hands-on experience is like practicing an instrument by only reading about it.
+                        Taking this to heart, I've supplemented my course work with projects that explore concepts from electricity and magnitism to heat transfer. Please 
+                        check out some of my crafts below.
+                    </div>
+                     <ul class="content-section-links">
+                        <li><a href="#CNC Router">CNC Router</a></li>
+                        <li><a href="#Analysis of Fin Separation on Convective Heat Transfer">Analysis of Fin Separation on Convective Heat Transfer</a></li>
+                        <li><a href="#MEMS Pressure Sensor">MEMS Pressure Sensor</a></li>
+                        <li><a href="#Energy Generating Shoe Soles">Energy Generating Shoe Soles</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- CNC Router -->
+        <div class="content-item" id="CNC Router">
+            <div class="content-item-title">CNC Router</div>
+            <div class="content-item-inner">
+                <!-- <img src="./Professional Photos/wheelchair full.jpg" alt="Wheelchair Stabilizer"> -->
+                <!--<div class="content-caption">
+                    blahblah
+                </div> -->
+                <div class="content-item-desc">
+                    [Image coming soon]
+                </div>
+                <div class="content-item-content">
+                    <div class="content-item-desc">
+                        Inspired by my experience machining at the Baum Family Makerspace, I designed a desktop-sized
+                        CNC router capable of machining Aluminum.  Using MasterCAM and Dxf files, I personally programmed 
+                        and operated the USC makerspace's OMAX waterjet and HASS VF-2 mill to manufacture the parts.  Limit 
+                        switches were also hand soldered and implemented for added safety.  Computer vision projects will be done 
+                        in the near future to enable automated milling.
+                    </div>
+                </div>
+            </div> 
+        </div>
 
-        <p class="project-title"><span class="text--color">Projects</span></p>
-        <ul class="project_list">
-            <li class="project">
-                <div class="project__title">
-                    <p class = "project-title">CNC Router</p>
+        <!-- Fins -->
+        <div class="content-item" id="Analysis of Fin Separation on Convective Heat Transfer">
+            <div class="content-item-title">Analysis of Fin Separation on Convective Heat Transfer</div>
+            <div class="content-item-inner">
+                <img src="./Professional Photos/heat_sink_exp.jpg" alt="Robot Gripper">
+                <div class="content-caption">
+                    Experimental setup for measuring temperature at the base, middle, and tips of fins.  Fan with nozel (left) was 
+                    used for forced convection.
                 </div>
-                <div class = "project__description">
-                    The mechanical design of a CNC router is remarkably similar to a CNC machine, 
-                    but routers are limited to softer and thinner materials due to their lower rigidity and cutting force.  
-                    This project’s focus was on improving rigidity and safety features on a CNC router with the goal 
-                    of machining Aluminum.
+                <div class="content-item-content">
+                    <div class="content-item-desc">
+                        To test the effects of fin spacing on heat transfer rate, I machined a custom modular heat sink and used a hot plate 
+                        as a heat source.  Forced convection trials were performed with a fan and nozzle and were compared with free/natural 
+                        convection cases.  Thermocouples were used to probe the temperatures at the base, middle, and tips of the fins. A custom
+                        LabView virtual instrument was used to visualize temperature over time and determine when steady state was reached.
+                    </div>
                 </div>
-                <div class="project__title">
-                    <h2>USC Solar Car</h2>
+            </div>
+        </div>
+
+        <!-- MEMS Pressure Sensor -->
+        <div class="content-item" id = "MEMS Pressure Sensor">
+            <div class="content-item-title">MEMS Pressure Sensor</div>
+            <div class="content-item-inner">
+                <img src="./Professional Photos/MEMS_pressure_sensor.jpg" alt="Control Board">
+                <div class="content-caption">
+                    Fully assembled pressure sensor.  
                 </div>
-                <div class = "project__description">
-                    High voltage system (specing out resistor, modeling the battery box)
+                <div class="content-item-content">
+                    <div class="content-item-desc">
+                        Applying concepts from the USC Introduction to Microelectromechanical Systems course (AME455), 
+                        I collaborated with a team of four to create a macroscale MEMS pressure sensor.  Strain gauges were 
+                        adhered between two silicone rubber membranes, which were screwed down and sealed with glue.  
+                        Strain gauge/ Wheatstone bridge readings were output on a voltage-time graph in a custom LabView virtual instrument.
+                    </div>
                 </div>
-            </li>
-        </ul>
+            </div>
+        </div>
+
+        <!-- Piezo shoe soles -->
+        <div class="content-item" id = "Energy Generating Shoe Soles">
+            <div class="content-item-title">Energy Generating Shoe Soles</div>
+                <div class="content-item-inner">
+                    <img src="./Professional Photos/Talaria.png" alt="Wheelchair Stabilizer">
+                    <div class="content-caption">
+                    Fully assembled wheelchair stabilizer with raspberry pi, Unitree A1 BLDC motor, and 24V battery.
+                    </div>                   
+                    <div class="content-item-content">
+                    
+                        <div class="content-item-desc">
+                            Inspired by the winged shoes of Hermes, I set out with my USC Makers team to design light-up 
+                            shoes powered by footsteps. After embedding piezoelectric crystals into 3D printed shoe soles, 
+                            we used a bridge rectifier circuit to supply DC current to LEDs. We successfully powered 8 LEDs 
+                            per shoe and presented our work at the USC Makers showcase. 
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
     </section>
+
     <footer>
         <div class="footer__row">
             <!-- # makes the item into a link that scrolls to top of page -->
@@ -106,5 +199,6 @@
             </div>
         </div>
     </footer>
+    </section>
 </body>
 </html>

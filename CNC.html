@@ -1,115 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nathan Chun</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nathan Chun</title>
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav>
+            <div class = "personal__logo"><a href="index.html"><span class="text--color">Nathan Chun</span></a></div>
+            <ul class="nav__link--list">
+                <li class="nav__link">
+                    <a href="research.html"class="
+                        nav__link--anchor
+                        link__hover-effect
+                        link__hover-effect--black
+                    ">Research</a>
+                </li>
+                <li class="nav__link">
+                    <a href="Projects.html"class="
+                        nav__link--anchor
+                        link__hover-effect
+                        link__hover-effect--black
+                    ">Projects</a>
+                </li>
+                <li class="nav__link">
+                    <a href="CV.html" class="
+                        nav__link--anchor
+                        link__hover-effect
+                        link__hover-effect--black
+                    ">Curriculum Vitae (CV)</a>
+                </li>
+                <li class="nav__link">
+                    <a href="CNC.html" class="
+                        nav__link--anchor
+                        link__hover-effect
+                        link__hover-effect--black
+                        nav__link--current
+                    ">CNC Machining</a>
+                </li>
+                <li class="nav__link">
+                    <a href="mailto:nchun@usc.edu" class="
+                        nav__link--anchor
+                        nav__link--anchor-primary
+                    ">Contact</a>
+                </li>
+            </ul>
+        </nav>
 
-<nav>
-    <div class = "personal__logo"><a href="index.html"><span class="text--color">Nathan Chun</span></a></div>
-    <ul class="nav__link--list">
-        <li class="nav__link">
-            <a href="research.html"class="
-                nav__link--anchor
-                link__hover-effect
-                link__hover-effect--black
-            ">Research</a>
-        </li>
-        <li class="nav__link">
-            <a href="Projects.html"class="
-                nav__link--anchor
-                link__hover-effect
-                link__hover-effect--black
-            ">Projects</a>
-        </li>
-        <li class="nav__link">
-            <a href="CV.html" class="
-                nav__link--anchor
-                link__hover-effect
-                link__hover-effect--black
-            ">Curriculum Vitae (CV)</a>
-        </li>
-        <li class="nav__link">
-            <a href="CNC.html" class="
-                nav__link--anchor
-                link__hover-effect
-                link__hover-effect--black
-            ">CNC Machining</a>
-        </li>
-        <li class="nav__link">
-            <a href="mailto:nchun@usc.edu" class="
-                nav__link--anchor
-                nav__link--anchor-primary
-            ">Contact</a>
-        </li>
-    </ul>
-</nav>
+        <!-- Intro -->
+        <header class="hero">
+            <div class="hero__content">
+                <p class="pdf-title">Manufacturing</p>
+                <img src="./Machining_Content/Bus_Bars_Stack.jpg" alt="HECTOR v2 " class="hero__img">
+                <div class = "hero__caption">
+                    Bus bars for the USC Solar Car team.
+                </div>
+            </div>
+        </header>
 
-<section id="projects">
-    <h1 class="section__title"><span class="text--color">CNC Machining</span></h1>
-    <ul class="project_list">
-        <li class="project">
-            <div class="project__title">
-                <h2>Introduction</h2>
+        <section class="content-list">
+            <div class="content-item">
+                <div class="content-item-title">Introduction</div>
+                    <div class="content-item-inner">
+                    <!-- <img src="./Professional Photos/Gripper.png" alt="Robot Gripper"> -->
+                        <div class="content-item-content">
+                            <div class="content-item-desc">
+                                I believe manufacturing is one of the most significant applications of robotics.  I've also
+                                always been fascinated by manufacturing processes that bring engineering processes to life. 
+                                Working as a CNC machinist at the USC Baum Family Makerspace, I've had the privilege of operating and programming
+                                a plethora of CNC and manual machines.  These experiences have engrained design for manufacturing,
+                                material selection, project management, and communication skills, which have permeated through
+                                my other engineering endeavors.  Below are some of the projects I've completed for various reknown
+                                USC design teams.
+                            </div>
+                            <ul class="content-section-links">
+                                <li><a href="#Manual Machining">Manual Machining</a></li>
+                                <li><a href="#CNC Machining">CNC Machining</a></li>
+                                <li><a href="#3D Printing">3D Printing</a></li>
+                                <!-- <li><a href="#Nanofabrication">Nanofabrication</a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class = "project__description">
-                Machine for anyone who submits a work order request.  Have done consultations with requesters.
-                Help with onboarding new machinists.  Have machined for USC design teams the including FSAE Racing Team, Rocket Propulsion Lab (RPL),
-                Formula Electric Racing, USC Liquid Propulsion Lab (LPL),  Solar Car Team,
-                USC Advanced Spacecraft Propulsion and Energy Laboratory (ASPEN), and more.  Fluent in programming and operating the Hass VF-2, Prototrack manual mills,
-                Hass ST-30Y, waterjet, and other shop machines.
+            <!-- Manual Mill parts -->
+            <div class="content-item" id="Manual Machining">
+                <div class="content-item-title">Manual Machining</div>
+                    <div class="content-item-inner">
+                        <img src="./Machining_Content/Inboard_Brackets.jpg" alt="Robot Gripper">
+                        <div class="content-caption">
+                            Inboard backets for the famous USC Formula SAE Racing team.  Machined entirely manually on
+                            a Prototrack 3-axis mill.
+                        </div>
+                        <img src = "./Machining_Content/Hub_Nut.jpg">
+                        <div class="content-caption">
+                            Practice hub nuts for the USC Formula SAE Racing team.  This was done on a Prototrack 3-axis manual mill
+                            with retrofitted programmable axes.
+                        </div>
+                        <div class="content-item-content">
+                            <div class="content-item-desc">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="project__title">
-                <h2>Inboard Backets</h2>
+
+            <!-- CNC Parts -->
+            <div class="content-item" id = "CNC Machining">
+                <div class="content-item-title">CNC Machining</div>
+                    <div class="content-item-inner">
+                        <img src="./Machining_Content/Upright.jpg" alt="Robot Gripper">
+                        <div class="content-caption">
+                            USC Formula SAE Racing team mini upright for practice.  A part meant to culminate all the machining 
+                            knowledge I'd gained thus far.
+                        </div>
+                        <img src = "./Machining_Content/Lathe_Part.jpg">
+                        <div class="content-caption">
+                            Drive train component for the USC Advanced Robotics Club machined on a HASS ST-30y and HASS VF-2.
+                        </div>
+                        <div class="content-item-content">
+                            <div class="content-item-desc">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class = "project__description">
-                Talaria, Sol'y Clean Solar
+        </section>
+
+
+        <footer>
+            <div class="footer__row">
+                <!-- # makes the item into a link that scrolls to top of page -->
+                <a href="#" class="footer__anchor" id=""> 
+                    <figure class="footer__logo">
+                        <img src="./Professional Photos/NC.png" class="footer__logo--img" alt="">
+                    </figure>
+                    <span class="footer__logo--popper">
+                        Top
+                        <i class="fas fa-arrow-up"></i>
+                    </span>
+                </a>
+                <div class="footer__social--list">
+                    <a href="https://linkedin.com/in/nathanchun" class=
+                    "footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white" target="blank">LinkedIn</a>
+                    <a href="https://github.com/Nathan-Chun" class=
+                    "footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white" target="blank">Github</a>
+                    <a href="mailto:nchun@usc.edu" class=
+                    "footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white" target="blank">Email</a>
+                    <a href="./Professional_Documents/Nathan_Chun_Mechatronics_Engineer_2025.pdf" class=
+                    "footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white" target="blank" download>Resume</a>
+                </div>
             </div>
-            <div class="project__title">
-                <h2>Fixtures</h2>
-            </div>
-            <div class = "project__description">
-                High voltage system (specing out resistor, modeling the battery box)
-            </div>
-        </li>
-    </ul>
-</section>
-<footer>
-    <div class="footer__row">
-        <!-- # makes the item into a link that scrolls to top of page -->
-        <a href="#" class="footer__anchor" id=""> 
-            <figure class="footer__logo">
-                <img src="./Professional Photos/NC.png" class="footer__logo--img" alt="">
-            </figure>
-            <span class="footer__logo--popper">
-                Top
-                <i class="fas fa-arrow-up"></i>
-            </span>
-        </a>
-        <div class="footer__social--list">
-            <a href="https://linkedin.com/in/nathanchun" class=
-            "footer__social--link
-            link__hover-effect
-            link__hover-effect--white" target="blank">LinkedIn</a>
-            <a href="https://github.com/Nathan-Chun" class=
-            "footer__social--link
-            link__hover-effect
-            link__hover-effect--white" target="blank">Github</a>
-            <a href="mailto:nchun@usc.edu" class=
-            "footer__social--link
-            link__hover-effect
-            link__hover-effect--white" target="blank">Email</a>
-            <a href="./Professional_Documents/Nathan_Chun_Mechatronics_Engineer_2025.pdf" class=
-            "footer__social--link
-            link__hover-effect
-            link__hover-effect--white" target="blank" download>Resume</a>
-        </div>
-    </div>
-</footer>
-</section>
-</body>
+        </footer>
+    </body>
 </html>

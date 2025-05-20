@@ -8,186 +8,253 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 </head>
+<body>
+    <nav>
+        <div class = "personal__logo"><a href="index.html"><span class="text--color">Nathan Chun</span></a></div>
+        <ul class="nav__link--list">
+            <li class="nav__link">
+                <a href="research.html"class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black
+                    nav__link--current
+                ">Research</a>
+            </li>
+            <li class="nav__link">
+                <a href="Projects.html"class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black
+                ">Projects</a>
+            </li>
+            <li class="nav__link">
+                <a href="CV.html" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black
+                ">Curriculum Vitae (CV)</a>
+            </li>
+            <li class="nav__link">
+                <a href="CNC.html" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black
+                ">CNC Machining</a>
+            </li>
+            <li class="nav__link">
+                <a href="mailto:nchun@usc.edu" class="
+                    nav__link--anchor
+                    nav__link--anchor-primary
+                ">Contact</a>
+            </li>
+        </ul>
+    </nav>
 
-<nav>
-    <div class = "personal__logo"><a href="index.html"><span class="text--color">Nathan Chun</span></a></div>
-    <ul class="nav__link--list">
-        <li class="nav__link">
-            <a href="research.html"class="
-                nav__link--anchor
-                link__hover-effect
-                link__hover-effect--black
-            ">Research</a>
-        </li>
-        <li class="nav__link">
-            <a href="Projects.html"class="
-                nav__link--anchor
-                link__hover-effect
-                link__hover-effect--black
-            ">Projects</a>
-        </li>
-        <li class="nav__link">
-            <a href="CV.html" class="
-                nav__link--anchor
-                link__hover-effect
-                link__hover-effect--black
-            ">Curriculum Vitae (CV)</a>
-        </li>
-        <li class="nav__link">
-            <a href="CNC.html" class="
-                nav__link--anchor
-                link__hover-effect
-                link__hover-effect--black
-            ">CNC Machining</a>
-        </li>
-        <li class="nav__link">
-            <a href="mailto:nchun@usc.edu" class="
-                nav__link--anchor
-                nav__link--anchor-primary
-            ">Contact</a>
-        </li>
-    </ul>
-</nav>
-
-<section id="projects">
-    <div class="title_block"></div>
-
-    <h1 class="section__title"><span class="text--color">Research</span></h1>
-    <ul class="project_list">
-        <li class="project">
-            <div class="project__title">
-                <h2>Introduction</h2>
-            </div>
-            <div class = "project__description">
-                Robotics, Controls, Embedded systems
-            </div>
-            <div class="project__title">
-                <h2>Construction Robotics</h2>
-            </div>
-            <div class = "project__description">
-                Current construction machines require operators to stand close by
-            </div>
-            <div class="project__title">
-                <h2>Humanoids and Quadrapeds</h2>
-            </div>
-            <div class = "project__description">
-                Designed for communication between the onboard computer and motors in HECTOR, the Dynamic Robotics and Control Lab humanoid robot.  Equipped with a Teensy 4.1 MCU, 3 CAN transceivers, 5 RS485 transceivers, and an IMU, Iris is analogous to the cerebellum, enabling motor control (pun intended) throughout HECTOR.
-            </div>
-            <div class="project__title">
-                <h2>Assistive Devices</h2>
-            </div>
-            <div class = "project__description">
-                Sudden acceleration, uneven weight distribution, and uneven surfaces can cause
-                wheelchair users to fallout and suffer injuries. In the event of an imminent fall, the stabilizer
-                quickly corrects the wheelchair position.
-            </div>
-
-            <!-- <div class="project__wrapper">
-                <img src="./Professional Photos/Gripper.png" alt="Gripper Project" class="project__img">
-                <div class="project__description">
-                    <h3 class="project__description--title">Robot Gripper</h3>
-                    <h4 class="project__description--sub-title">SolidWorks</h4>
-                    <p class="project__description--para">
-                        Designed a robotic gripper for A1, Aliengo, and Go1 robot dogs.  Furnished with an A1 and servo motor, the arm has 1 degree of motion and will be featured in an ICRA research paper.
-                    </p>
-                    <div class="project__description--links">
-                        
-                        <a href="https://drive.google.com/file/d/1gsYXKyComKPNsY2xf3E0P0EOU82071qQ/view?usp=sharing" target="_blank" class="project__description--link">
-                            <i class="fas fa-video"></i>
-                        </a>
-                    
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- <div class="project__wrapper">
-                <img src="./Professional Photos/wheelchair full.jpg" alt="Wheelchair Project" class="project__img">
-                <div class="project__description">
-                    <h3 class="project__description--title">Wheelchair Stabilizer Project</h3>
-                    <h4 class="project__description--sub-title">Teensy 4.1, Arduino, Solidworks, Matlab</h4>
-                    <p class="project__description--para">
-                        Sudden acceleration, uneven weight distribution, and uneven surfaces can cause
-                        wheelchair users to fallout and suffer injuries. In the event of an imminent fall, the stabilizer
-                        quickly corrects the wheelchair position.
-                    </p>
-                    <div class="project__description--links">
-                        <a href="https://drive.google.com/file/d/1gsYXKyComKPNsY2xf3E0P0EOU82071qQ/view?usp=sharing" target="_blank" class="project__description--link">
-                            <i class="fas fa-video"></i>
-                        </a>
-                    </div>
-                </div>
-            </div> -->
-<!-- 
-            <div class="project__wrapper">
-                <img src="./Professional Photos/Iris.png" alt="Wheelchair Project" class="project__img">
-                <div class="project__description">
-                    <h3 class="project__description--title">Iris (Low Level Control Board)</h3>
-                    <h4 class="project__description--sub-title">KiCad, SolidWorks</h4>
-                    <p class="project__description--para">
-                        Designed for communication between the onboard computer and motors in HECTOR, the Dynamic Robotics and Control Lab humanoid robot.  Equipped with a Teensy 4.1 MCU, 3 CAN transceivers, 5 RS485 transceivers, and an IMU, Iris is analogous to the cerebellum, enabling motor control (pun intended) throughout HECTOR.
-                    </p>
-                    <div class="project__description--links">
-                    
-                        <a href="https://drive.google.com/file/d/1gsYXKyComKPNsY2xf3E0P0EOU82071qQ/view?usp=sharing" target="_blank" class="project__description--link">
-                            <i class="fas fa-video"></i>
-                        </a>
-                    
-                    </div>
-                </div>
-            </div> -->
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero__content">
             
-            <!-- <div class="project__wrapper">
-                <img src="./Professional Photos/Talaria.png" alt="Wheelchair Project" class="project__img">
-                <div class="project__description">
-                    <h3 class="project__description--title">Talaria</h3>
-                    <h4 class="project__description--sub-title">SolidWorks, 3D Printing, Piezoelectric Technology</h4>
-                    <p class="project__description--para">
-                        Inspired by the winged shoes of Hermes, I set out with my USC Makers team to design light-up shoes powered by footsteps.  After embedding piezoelectric crystals into 3D printed shoe soles, we used a bridge rectifier circuit to supply DC current to LEDs.  We successfully powered 8 LEDs per shoe and presented our work at the USC Makers showcase.
-                    </p>
-                    <div class="project__description--links">
-                    
-                        <a href="https://drive.google.com/file/d/1gsYXKyComKPNsY2xf3E0P0EOU82071qQ/view?usp=sharing" target="_blank" class="project__description--link">
-                            <i class="fas fa-video"></i>
-                        </a>
-                    
-                    </div>
+            <p class="pdf-title">Research</p>
+            <img src="./Professional Photos/HECTORv2.jpeg" alt="HECTOR v2 " class="hero__img">
+            <div class = "hero__caption">
+                HECTOR v2 in the Mojave Desert.
+            </div>
+
+            <!-- <div class="hero__text-block">
+                
+                <p class="hero__subtitle">Robotics Researcher & Machinist</p>
+                <div class="hero__links">
+                    <a href="https://linkedin.com/in/nathanchun" class="hero__link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/NathanChun3" class="hero__link" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:nchun@usc.edu" class="hero__link"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="./Professional_Documents/Nathan_Chun_Mechatronics_Engineer_2025.pdf" download class="hero__link"><i class="fa-solid fa-file-pdf"></i></a>
                 </div>
             </div> -->
-        </li>
-    </ul>
-</section>
-<footer>
-    <div class="footer__row">
-        <!-- # makes the item into a link that scrolls to top of page -->
-        <a href="#" class="footer__anchor" id=""> 
-            <figure class="footer__logo">
-                <img src="./Professional Photos/NC.png" class="footer__logo--img" alt="">
-            </figure>
-            <span class="footer__logo--popper">
-                Top
-                <i class="fas fa-arrow-up"></i>
-            </span>
-        </a>
-        <div class="footer__social--list">
-            <a href="https://linkedin.com/in/nathanchun" class=
-            "footer__social--link
-            link__hover-effect
-            link__hover-effect--white" target="blank">LinkedIn</a>
-            <a href="https://github.com/Nathan-Chun" class=
-            "footer__social--link
-            link__hover-effect
-            link__hover-effect--white" target="blank">Github</a>
-            <a href="mailto:nchun@usc.edu" class=
-            "footer__social--link
-            link__hover-effect
-            link__hover-effect--white" target="blank">Email</a>
-            <a href="./Professional_Documents/Nathan_Chun_Mechatronics_Engineer_2025.pdf" class=
-            "footer__social--link
-            link__hover-effect
-            link__hover-effect--white" target="blank" download>Resume</a>
         </div>
-    </div>
-</footer>
-</section>
+    </header>
+
+  <!-- Research List -->
+    <section class="content-list">
+        <div class="content-item">
+            <div class="content-item-title">Introduction</div>
+                <div class="content-item-inner">
+                <!-- <img src="./Professional Photos/Gripper.png" alt="Robot Gripper"> -->
+                <div class="content-item-content">
+                    <div class="content-item-desc">
+                        I'm fascinated by the use of mathematics and physics to model and control physical systems, and
+                        firmly believe in the power of robots in automation and human-robot interaction.  This has inspired me to 
+                        investigate assistive a range of robotic form factors, control approaches, and applications.  I invite you
+                        to learn more about my past projects in the following sections.
+                    </div>
+                     <ul class="content-section-links">
+                        <li><a href="#Humanoid Pose Optimization">Humanoid Pose Optimization</a></li>
+                        <li><a href="#Effective Teleoperation for Robotic Manipulation and Locomotion">Effective Teleoperation for Robotic Manipulation and Locomotion</a></li>
+                        <li><a href="#Robot Gripper for Quadrupeds">Robot Gripper for Quadrupeds</a></li>
+                        <li><a href="#HECTOR v2 Low-Level Control Board">HECTOR v2 Low-Level Control Board</a></li>
+                        <li><a href="#Wheelchair Stabilizer">Wheelchair Stabilizer</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pose Optimization -->
+        <div class="content-item" id="Humanoid Pose Optimization">
+            <div class="content-item-title">Humanoid Pose Optimization</div>
+            <div class="content-item-inner">
+                <!-- <img src="./Professional Photos/wheelchair full.jpg" alt="Wheelchair Stabilizer"> -->
+                <!-- <div class="content-caption">
+                    blahblah
+                </div> -->
+                <div class="content-item-desc">
+                    [Image coming soon]
+                </div>
+                <div class="content-item-content">
+                    <div class="content-item-desc">
+                        Kinodynamic pose optimization with has shown promising results when combined with
+                        locomanipulation model predictive control (MPC) in simulation [1].  To 
+                        test the validity of simulation results, I worked with 
+                        <a href="https://scholar.google.com/citations?user=GI5Dse8AAAAJ&hl=en" class="text-links">Junheng Li</a>
+                        to translate implement the control method in C++ and deploy it on 
+                        <a href="https://laser-robotics.com/hector-v2/" class="text-links">HECTOR v2</a>.  This project is
+                        currently in progress, and will be updated with results in the future. 
+                        <div style ="height: 2em;"></div>
+                        <p>Checkout the repo <a href="https://github.com/Nathan-Chun/Humanoid_Pose_Optimization">here</a></p>
+                        <div style ="height: 2em;"></div>                        
+                        <p>[1] J. Li, Q. Nguyen, "Kinodynamics-based Pose Optimization for Humanoid Loco-manipulation," arXiv:2303.04985 [cs.RO], Jul. 2023.</p>
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+        <!-- Construction -->
+        <div class="content-item" id="Effective Teleoperation for Robotic Manipulation and Locomotion">
+            <div class="content-item-title">Effective Teleoperation for Robotic Manipulation and Locomotion</div>
+            <div class="content-item-inner">
+                <iframe src="https://drive.google.com/file/d/1d1Nf6lo8GsX_lkF7ERU3amSlgs02yzbs/preview" width="480" height="270" allow="autoplay"></iframe>                
+                <div class="content-caption">
+                    Demonstration of two stage teleoperation (RRT* followed by Joystick control) and collision avoidance.  
+                </div>
+                <div class="content-item-content">
+                    <div class="content-item-desc">
+                        To improve workplace safety for construction workers, a universal control 
+                        and user interface framework was developed that can be used to safely operate a variety of machines including cranes, 
+                        demolition machines, and more.  This framework will enable users to teleoperate construction machines safely 
+                        without compromising crucial sensory cues that enable workers to precisely operate the machines.  
+                        Working towards this goal, we’ve developed a Gazebo-ROS2 simulation that uses control barrier functions (CBF) 
+                        to avoid obstacles and allows users to interact through VR and joystick control.  
+                    </div>
+                </div>
+                <img src="./Professional Photos/Construction_Gazebo.png" alt="Teleoperation">
+                <div class="content-caption">
+                    Gazebo simulation (left) and MeshCat obstacle visualizer (right). 
+                    Lidar (blue horizontal ray plane) generates point cloud data of the cylinder.  
+                    Then, an ML clustering algorithm generates a spherical barrier (shown in green) which 
+                    the arm avoids using a control barrier function.  
+                    Users can control the arm using a joystick without worrying about obstacle collision.
+                </div>
+                <div class="content-item-content">
+                    <div class="content-item-desc">
+                        We are currently building a full obstacle course and refining the path planning method.
+                        After simulations are complete, we will deploy the framework on a real Brokk 120DII machine
+                        and perform necessary system integration.
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+        <!-- Gripper -->
+        <div class="content-item" id="Robot Gripper for Quadrupeds">
+            <div class="content-item-title">Robot Gripper for Quadrupeds</div>
+            <div class="content-item-inner">
+                <img src="./Professional Photos/Gripper.png" alt="Robot Gripper">
+                <div class="content-caption">
+                    SolidWorks rendering of the gripper on a Unitree A1 quadruped.
+                </div>
+                <div class="content-item-content">
+                    <div class="content-item-desc">
+                        Robot-robot interaction is an active area of research that is complex both from a hardware and control perspective.
+                        Hierarchical control is one method to quickly solve for a optimal trajectories and account for complex dynamics in these collaborative settings.
+                        To faciliate collaborative object manipulation with quadrupeds, I designed a simple, but effective robotic gripper. Furnished with an A1 and servo motor, 
+                        the arm has 2 degrees of freeedom and will be featured in an ICRA research paper.
+                        The paper, titled "Hierarchical Control Framework for Collision-Free Collaborative Loco-manipulation of Large and Heavy Objects," is currently under review
+                        for CASE2025.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HECTOR v2 Control Board -->
+        <div class="content-item" id = "HECTOR v2 Low-Level Control Board">
+            <div class="content-item-title">HECTOR v2 Low-Level Control Board</div>
+            <div class="content-item-inner">
+                <img src="./Professional Photos/Iris.png" alt="Control Board">
+                <div class="content-caption">
+                    Low-Level Control board KiCad rendering.  H-shape extended legs are for mounting to 
+                    the walls of HECTOR's body.
+                </div>
+                <div class="content-item-content">
+                    <div class="content-item-desc">
+                        Designed for communication between the onboard computer and motors in HECTOR, 
+                        the Dynamic Robotics and Control Lab humanoid robot. Equipped with a Teensy 4.1 MCU, 
+                        3 CAN transceivers, 5 RS485 transceivers, and an IMU, Iris is analogous to the cerebellum, 
+                        enabling motor control (pun intended) throughout HECTOR.                     
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wheelchair -->
+        <div class="content-item" id = "Wheelchair Stabilizer">
+            <div class="content-item-title">Wheelchair Stabilizer</div>
+                <div class="content-item-inner">
+                    <img src="./Professional Photos/wheelchair full.jpg" alt="Wheelchair Stabilizer">
+                    <div class="content-caption">
+                    Fully assembled wheelchair stabilizer with raspberry pi, Unitree A1 BLDC motor, and 24V battery.
+                    </div>                   
+                    <div class="content-item-content">
+                    
+                        <div class="content-item-desc">
+                            Sudden acceleration, uneven weight distribution, and uneven surfaces can cause wheelchair users to fall out and suffer injuries. In the event of an imminent fall, the stabilizer quickly corrects the wheelchair position.
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="footer__row">
+            <!-- # makes the item into a link that scrolls to top of page -->
+            <a href="#" class="footer__anchor" id=""> 
+                <figure class="footer__logo">
+                    <img src="./Professional Photos/NC.png" class="footer__logo--img" alt="">
+                </figure>
+                <span class="footer__logo--popper">
+                    Top
+                    <i class="fas fa-arrow-up"></i>
+                </span>
+            </a>
+            <div class="footer__social--list">
+                <a href="https://linkedin.com/in/nathanchun" class=
+                "footer__social--link
+                link__hover-effect
+                link__hover-effect--white" target="blank">LinkedIn</a>
+                <a href="https://github.com/Nathan-Chun" class=
+                "footer__social--link
+                link__hover-effect
+                link__hover-effect--white" target="blank">Github</a>
+                <a href="mailto:nchun@usc.edu" class=
+                "footer__social--link
+                link__hover-effect
+                link__hover-effect--white" target="blank">Email</a>
+                <a href="./Professional_Documents/Nathan_Chun_Mechatronics_Engineer_2025.pdf" class=
+                "footer__social--link
+                link__hover-effect
+                link__hover-effect--white" target="blank" download>Resume</a>
+            </div>
+        </div>
+    </footer>
+    </section>
 </body>
 </html>

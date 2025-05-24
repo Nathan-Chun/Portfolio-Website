@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
 </head>
 <body>
     <nav>
@@ -55,10 +59,10 @@
         <div class="hero__content">
             
             <p class="pdf-title">Projects</p>
-            <img src="./Professional Photos/projects_title_img.jpg" alt="Projects" class="hero__img">
-            <!-- <div class = "hero__caption">
-                HECTOR v2 in the Mojave Desert.
-            </div> -->
+            <img src="./Professional Photos/projects_title_alt.jpg" alt="Projects" class="hero__img">
+            <div class = "hero__caption">
+                On the grind.
+            </div>
         </div>
     </header>
 
@@ -85,7 +89,7 @@
         </div>
         <!-- CNC Router -->
         <div class="content-item" id="CNC Router">
-            <div class="content-item-title">CNC Router</div>
+            <div class="content-item-title">CNC Router - Mechanical Design, Electrical Circuits, Manufacturing</div>
             <div class="content-item-inner">
                 <!-- <img src="./Professional Photos/wheelchair full.jpg" alt="Wheelchair Stabilizer"> -->
                 <!--<div class="content-caption">
@@ -97,7 +101,7 @@
                 <div class="content-item-content">
                     <div class="content-item-desc">
                         Inspired by my experience machining at the Baum Family Makerspace, I designed a desktop-sized
-                        CNC router capable of machining Aluminum.  Using MasterCAM and Dxf files, I personally programmed 
+                        CNC router capable of machining Aluminum.  Using MasterCAM and DXF files, I personally programmed 
                         and operated the USC makerspace's OMAX waterjet and HASS VF-2 mill to manufacture the parts.  Limit 
                         switches were also hand soldered and implemented for added safety.  Computer vision projects will be done 
                         in the near future to enable automated milling.
@@ -108,19 +112,86 @@
 
         <!-- Fins -->
         <div class="content-item" id="Analysis of Fin Separation on Convective Heat Transfer">
-            <div class="content-item-title">Analysis of Fin Separation on Convective Heat Transfer</div>
+            <div class="content-item-title">Analysis of Fin Separation on Convective Heat Transfer - Mathematical Analysis, Experimental Design, MATLAB, LabView</div>
             <div class="content-item-inner">
-                <img src="./Professional Photos/heat_sink_exp.jpg" alt="Robot Gripper">
+                <img src="./Professional Photos/heat_sink_exp.jpg" alt="heat sink experiment">
                 <div class="content-caption">
                     Experimental setup for measuring temperature at the base, middle, and tips of fins.  Fan with nozel (left) was 
                     used for forced convection.
                 </div>
                 <div class="content-item-content">
                     <div class="content-item-desc">
-                        To test the effects of fin spacing on heat transfer rate, I machined a custom modular heat sink and used a hot plate 
-                        as a heat source.  Forced convection trials were performed with a fan and nozzle and were compared with free/natural 
+                        To test the effects of fin spacing on heat transfer rate, my team and I proposed and executed a simple experiment.
+                        The main pieces of equipment were a custom machined heat sink and a hot plate. The heat sink was designed to be modular, where
+                        the fins could easily be attached and reattached to the base plate at various spacings. The hot plate was set to a constant temperature, and 
+                        the heat sink was allowed to reach steady state before measurements were taken.
+                    </div>
+                    <img src="./Professional Photos/heat_sink.jpg" alt="heat sink">
+                    <div class="content-caption">
+                        Custom aluminum heat sink with modular fins freshly machined on the HASS VF-2 mill.
+                    </div>
+                    <div class="content-item-desc">
+                        Forced convection trials were performed with a fan and nozzle and were compared with natural 
                         convection cases.  Thermocouples were used to probe the temperatures at the base, middle, and tips of the fins. A custom
-                        LabView virtual instrument was used to visualize temperature over time and determine when steady state was reached.
+                        LabView virtual instrument was created to visualize temperature over time and determine when steady state was reached.  
+                        Using the Churchill and Chu Correlation, the Nusseult Number (Nu) and subsequently the convective heat transfer coefficient (h) were 
+                        calculated for each trial.  
+                    </div>
+                    <div class="center-math">
+                        \(h=\frac{Nu(L)}{k}\)
+                    </div>
+                    <div class="content-item-desc">
+                        Then, natural convection heat transfer rate (Q) could be calculated as
+                    </div>
+                    <div class="center-math">
+                        \(Q=hA(T_b-T_\infty)\)
+                    </div>
+                    <div class="content-item-desc">
+                        where \(T_b\) is the base temperature, \(T_\infty\) is the ambient temperature, and \(A\) is the surface area of the fin.
+                    </div>
+                    <div class="content-item-desc">    
+                        Temperature gradient was found with the 1D fin approximation
+                    </div>
+                    <div class="center-math">
+                        \(\frac{d^2\theta}{dx^2}-m^2\theta=0\)
+                    </div>
+                    <div class="content-item-desc">
+                        where \(\theta=\frac{T-T_\infty}{T_b-T_\infty}\) is the non-dimensional temperature, \(m=\sqrt{\frac{hP}{kA_c}}\) is the fin parameter, 
+                        \(P\) is the perimeter, \(A_c\) is the cross-sectional area, and \(k\) is the thermal conductivity of the fin material.
+                    </div>
+                    <div class="content-item-desc">    
+                        Comparing the temperature gradients and heat transfer rates (Q) calculated with the 1D fin approximation for each trial, we found that the fin heat dissipation effectiveness dramatically decreased at sufficiently small and large fin spacings.
+                    </div>
+                    <img src="./Professional Photos/heat_sink_results_natural_conv.png" alt="heat sink">
+                    <div class="content-caption">
+                        (a) Temperature gradients for natural convection cases.  As fin pitch increases, base temperature generally decreases 
+                        and gradients become steeper.  (b) Convective heat transfer coefficient (b) Q plot for each fin spacing, 
+                        which shows a sharp 2-fold increase in efficiency at 3.5 fin widths.  There is a subsequent decrease in efficiency at 
+                        7 fin widths, indicating that beyond a certain fin spacing, more fins are needed.
+                    </div>
+                    <div class="content-item-desc">
+                        These natural convection results fit expectations, because intuitively, heat is trapped when fins are too close, preventing
+                        effective heat dissipation and violating assumptions.  For example, \(T_\infty\) was assumed uniform and constant, but this is 
+                        no longer true at sufficiently small spacings.  On the other hand, at large spacings, each fin must dissipate more heat for a 
+                        larger portion of the base,which also reduces effectiveness.
+                    </div>
+                    <div class="content-item-desc">
+                        Analysis of forced convection trails was less straightforward due to complicated dynamics and unideal experimental conditions among other factors.
+                        However, we found that fin effectiveness stayed relatively constant for all spacings and temperature gradients weere much steeper than natural convection cases.
+                    </div>
+                    <img src="./Professional Photos/heat_sink_results_forced_conv.png" alt="heat sink">
+                    <div class="content-caption">
+                        Forced convection temperature gradients and heat transfer rates (Q). Q stayed relatively constant across all fin spacings and 
+                        temperature gradients were steeper than natural convection cases. 
+                    </div>
+                    <div class="content-item-desc">
+                        The steeper temperature gradients are due to increased heat dissipation from forced convection.  The constant Q values across fin spacings
+                        indicate that fin spacing does not significantly affect heat dissipation in forced convection cases, which is likely due to the prevention of heat
+                        accumulation between fins by the air flow.
+                    </div>
+                    <div class="content-item-desc">
+                        Overall, results matched expectations and the optimal fin spacing was found to be ~3.5 fin widths for natural convection cases.  We acknowledge that
+                        our experiment was limited by factors such as the imprecise temperature measurement methods and non-uniform airflow across all fins.
                     </div>
                 </div>
             </div>
@@ -128,18 +199,31 @@
 
         <!-- MEMS Pressure Sensor -->
         <div class="content-item" id = "MEMS Pressure Sensor">
-            <div class="content-item-title">MEMS Pressure Sensor</div>
+            <div class="content-item-title">MEMS Pressure Sensor - Prototyping, Experimental Design, Electrical Circuits</div>
             <div class="content-item-inner">
                 <img src="./Professional Photos/MEMS_pressure_sensor.jpg" alt="Control Board">
                 <div class="content-caption">
-                    Fully assembled pressure sensor.  
+                    Fully assembled pressure sensor. 
                 </div>
                 <div class="content-item-content">
                     <div class="content-item-desc">
                         Applying concepts from the USC Introduction to Microelectromechanical Systems course (AME455), 
-                        I collaborated with a team of four to create a macroscale MEMS pressure sensor.  Strain gauges were 
+                        I collaborated with a team of four to create a macroscale MEMS pressure sensor.  As shown in the figure above, the walls of 
+                        the sensor were angled at 54.7 degrees to facilitate fabrication at the micro or nano scale.  Strain gauges were 
                         adhered between two silicone rubber membranes, which were screwed down and sealed with glue.  
-                        Strain gauge/ Wheatstone bridge readings were output on a voltage-time graph in a custom LabView virtual instrument.
+                        Since strain gauge/Wheatstone bridge readings were diffcult to consistently track on digital multimeters, we built a 
+                        LabView virtual instrument to output voltage-time graphs. Experimental results showed a linear trend at pressures of 0.5-1.5psi.
+                    </div>
+                    <img src="./Professional Photos/MEMS_Plot.png" alt="Control Board">
+                    <div class="content-caption">
+                        Pressure vs Voltage plot showing an initial linear trend followed by a plateau at higher pressures. Sensor calibration factor was
+                        determined to be ~24.6mV/psi.
+                    </div>
+                    <div class="content-item-desc">
+                        As shown in the figure above, the sensor isn't reliable at pressures beyond 1.5psi.  Since the 
+                        silicone membrane material's high elasticity wouldn't likely limit the strain gauge precision, we speculate that the strain gauges
+                        begin to slip due to poor adherance.  Air leakage through imperfect seals could've also limited the sensor's readable range.  
+
                     </div>
                 </div>
             </div>
@@ -151,10 +235,9 @@
                 <div class="content-item-inner">
                     <img src="./Professional Photos/Talaria.png" alt="Wheelchair Stabilizer">
                     <div class="content-caption">
-                    Fully assembled wheelchair stabilizer with raspberry pi, Unitree A1 BLDC motor, and 24V battery.
+                        3D printed TPU shoe soles embedded with piezoelectric crystals wired up with makeshift lightup shoes.
                     </div>                   
                     <div class="content-item-content">
-                    
                         <div class="content-item-desc">
                             Inspired by the winged shoes of Hermes, I set out with my USC Makers team to design light-up 
                             shoes powered by footsteps. After embedding piezoelectric crystals into 3D printed shoe soles, 

@@ -113,11 +113,12 @@ a,
 }
 
 .hero__img {
-    width: 220px;
-    height: 300px;
+    width: 100%;
+    max-width: 320px;      /* or your preferred max width */
+    height: auto;          /* maintain aspect ratio */
     object-fit: cover;
     object-position: center 80%;
-    border-radius: 12px; /* rectangle with slightly rounded corners */
+    border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     margin-bottom: 0;
     border: 4px solid #e0e0e0;
@@ -223,7 +224,7 @@ a,
 }
 .text-links{
     color:#242424;
-    text-decoration:none;
+    text-decoration:underline;
 }
 
 .content-section-links li{
@@ -293,7 +294,7 @@ a,
 
 .content-item img {
     width: 100%;
-    max-width: 500px;
+    max-width: 700px;
     height: 100%;
     /* max-height: 500px; */
     object-fit: contain;
@@ -303,6 +304,35 @@ a,
     margin-bottom: 0;
     border: 4px solid #e0e0e0;
     /* padding: 20px 20px 20px 20px; */
+}
+.content-item-inner video {
+    width: 100%;
+    max-width: 700px;
+    height: 100%;
+    /* max-height: 500px; */
+    object-fit: contain;
+    object-position: 50% 50%;
+    border-radius: 12px; /* rectangle with slightly rounded corners */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 0;
+    border: 4px solid #e0e0e0;
+    /* padding: 20px 20px 20px 20px; */
+}
+
+.content-item-inner img {
+    width: 700px;              /* Set desired width */
+    height: 100%;             /* Set desired height */
+    object-fit: cover;         /* Crops the image to fill the box */
+    object-position: center;   /* Center the crop */
+    display: block;
+    margin: 18px auto 8px auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.center-math {
+    text-align: center;
+    margin: 1.5em 0;
 }
 
 .content-item-desc {
@@ -430,6 +460,6 @@ footer {
     .hero__img {
         width: 90vw;
         max-width: 320px;
-        height: 220px;
+        height: auto;
     }
 }

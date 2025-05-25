@@ -91,7 +91,7 @@ a,
     justify-content: center;
     padding: 24px 20px 8px 20px;
     background: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    /* box-shadow: 0 2px 8px rgba(0,0,0,0.03); */
 }
 
 .hero__caption {
@@ -412,8 +412,8 @@ footer {
     left: 100%;
     top: 50%;
     transform: translateY(-50%);
-    visibility: hidden;
-    opacity: 0;
+    /* visibility: hidden; */
+    /* opacity: 0; */
     margin-left: 10px;
     font-size: 0.95rem;
     color: #bbb;
@@ -431,7 +431,7 @@ footer {
 
 .footer__anchor:hover .footer__logo--popper {
     visibility: visible;
-    opacity: 1;
+    /* opacity: 1; */
 }
 
 .footer__social--list {
@@ -445,10 +445,10 @@ footer {
     color: #fff;
     font-size: 1.1rem;
     text-decoration: none;
-    transition: color 0.2s;
+    /* transition: color 0.2s; */
 }
 .footer__social--link:hover {
-    color: #0072b1;
+    text-decoration: underline;
 }
 
 /* Responsive */

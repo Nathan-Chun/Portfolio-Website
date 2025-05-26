@@ -17,6 +17,7 @@
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <a id="top"></a>
     <nav>
         <div class = "personal__logo"><a href="index.html"><span class="text--color">Nathan Chun | 陳乃誠</span></a></div>
         <button id="navToggle" class="nav__toggle">&#9776;</button>
@@ -122,12 +123,12 @@
                         Kinodynamic pose optimization has shown promising results when combined with
                         locomanipulation model predictive control (MPC) in simulation [1].  To 
                         test the validity of simulation results, I'm working with 
-                        <a href="https://scholar.google.com/citations?user=GI5Dse8AAAAJ&hl=en" class="text-links">Junheng Li</a>
+                        <a href="https://scholar.google.com/citations?user=GI5Dse8AAAAJ&hl=en" class="text-links" target ="blank">Junheng Li</a>
                         to implement the control method in C++ and deploy it on 
-                        <a href="https://laser-robotics.com/hector-v2/" class="text-links">HECTOR v2</a>.  This project is
+                        <a href="https://laser-robotics.com/hector-v2/" class="text-links" target ="blank">HECTOR v2</a>.  This project is
                         currently in progress, and will be updated with results in the future. 
                         <div style ="height: 2em;"></div>
-                        <p>Checkout the repo <a href="https://github.com/Nathan-Chun/Humanoid_Pose_Optimization" class="text-links">here</a></p>
+                        <p>Checkout the repo <a href="https://github.com/Nathan-Chun/Humanoid_Pose_Optimization" class="text-links" target ="blank">here</a></p>
                         <div style ="height: 2em;"></div>                        
                         <p>[1] J. Li, Q. Nguyen, "Kinodynamics-based Pose Optimization for Humanoid Loco-manipulation," arXiv:2303.04985 [cs.RO], Jul. 2023.</p>
                     </div>
@@ -139,7 +140,11 @@
         <div class="content-item" id="Effective Teleoperation for Robotic Manipulation and Locomotion">
             <div class="content-item-title">Effective Teleoperation for Robotic Manipulation and Locomotion</div>
             <div class="content-item-inner">
-                <iframe src="https://drive.google.com/file/d/1d1Nf6lo8GsX_lkF7ERU3amSlgs02yzbs/preview" width="480" height="270" allow="autoplay"></iframe>                
+                <video controls loop muted autoplay width="100%" height="100%"; object-fit:cover; object-position:center;">
+                    <source src="./Research_Content/Brokk_Sim_Demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <!-- <iframe src="https://drive.google.com/file/d/1d1Nf6lo8GsX_lkF7ERU3amSlgs02yzbs/preview" width="480" height="270" allow="autoplay"></iframe>                 -->
                 <div class="content-caption">
                     Demonstration of two stage teleoperation (RRT* followed by Joystick control) and collision avoidance.  
                 </div>
@@ -243,7 +248,7 @@
     <footer>
         <div class="footer__row">
             <!-- # makes the item into a link that scrolls to top of page -->
-            <a href="#" class="footer__anchor" id=""> 
+            <a href="#top" class="footer__anchor" id=""> 
                 <figure class="footer__logo">
                     <img src="./Professional Photos/NC.png" class="footer__logo--img" alt="">
                 </figure>
@@ -268,7 +273,6 @@
             </div>
         </div>
     </footer>
-    </section>
     <script src="nav.js"></script>
 </body>
 </html>

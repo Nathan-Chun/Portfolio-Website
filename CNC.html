@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Nathan Chun</title>
+        <!-- Scale based on device screen width -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon">
         <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
         <link rel="android-chrome-512x512" href="/favicon/android-chrome-512x512.png">
@@ -17,7 +19,8 @@
     <body>
         <nav>
             <div class = "personal__logo"><a href="index.html"><span class="text--color">Nathan Chun | 陳乃誠</span></a></div>
-            <ul class="nav__link--list">
+            <button id="navToggle" class="nav__toggle">&#9776;</button>
+            <ul class="nav__link--list" id="navLinks">
                 <li class="nav__link">
                     <a href="research.html"class="
                         nav__link--anchor
@@ -204,5 +207,6 @@
                 </div>
             </div>
         </footer>
+        <script src="nav.js"></script>
     </body>
 </html>

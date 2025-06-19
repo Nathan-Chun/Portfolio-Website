@@ -113,13 +113,13 @@
             <div class="content-item" id="Humanoid Pose Optimization">
                 <div class="content-item-title">Humanoid Pose Optimization</div>
                 <div class="content-item-inner">
-                    <video controls loop muted autoplay width="100%" height="100%"; object-fit:cover; object-position:center;">
-                        <source src="./Research_Content/Pose_Opt_MPC.mp4" type="video/mp4">
+                    <video controls loop muted autoplay width="100%" height="100%"; object-fit:cover; object-position:center;>
+                        <source src="./Research_Content/Pose_Opt_Push1.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                     <!-- <iframe src="https://drive.google.com/file/d/1d1Nf6lo8GsX_lkF7ERU3amSlgs02yzbs/preview" width="480" height="270" allow="autoplay"></iframe>                 -->
                     <div class="content-caption">
-                        MCP tracking of CoM rotations determined with pose optimization.
+                        MCP + PD tracking of CoM rotations and arm positions determined with pose optimization.  MPC switches to pose optimization tracking after initialization (~9s mark).
                     </div>
                     <div class="content-item-content">
                         <div class="content-item-desc">
@@ -129,7 +129,7 @@
                             <a href="https://scholar.google.com/citations?user=GI5Dse8AAAAJ&hl=en" class="text-links" target ="blank">Junheng Li</a>
                             to implement the control method in C++ and deploy it on 
                             <a href="https://laser-robotics.com/hector-v2/" class="text-links" target ="blank">HECTOR v2</a>.  This project is
-                            currently in progress, and will be updated with results in the future. 
+                            currently in progress, and will be updated with results in the future.
                             <div style ="height: 2em;"></div>
                             <p>Checkout the repo <a href="https://github.com/Nathan-Chun/Humanoid_Pose_Optimization" class="text-links" target ="blank">here</a></p>
                             <div style ="height: 2em;"></div>                        

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nathan Chun</title>
+        <!-- Scale based on device screen width -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="../favicon/apple-touch-icon.png">
+    <link rel="android-chrome-512x512" href="../favicon/android-chrome-512x512.png">
+    <link rel="android-chrome-192x192" href="../favicon/android-chrome-192x192.png">
+    <link rel="favicon-16x16" href="../favicon/favicon-16x16.png">
+    <link rel="favicon-32x32" href="../favicon/favicon-32x32.png">
+    <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+    </head>
+    <body>
+        <a id="top"></a>
+        <section>
+            <nav>
+                <div class = "personal__logo"><a href="../index.html"><span class="text--color">Nathan Chun | 陳乃誠</span></a></div>
+                <button id="navToggle" class="nav__toggle">&#9776;</button>
+                <ul class="nav__link--list" id = "navLinks">
+                    <li class="nav__link">
+                        <a href="../research.html"class="
+                            nav__link--anchor
+                            link__hover-effect
+                            link__hover-effect--black
+                        ">Research</a>
+                    </li>
+                    <li class="nav__link">
+                        <a href="../Projects.html"class="
+                            nav__link--anchor
+                            link__hover-effect
+                            link__hover-effect--black
+                            nav__link--current
+                        ">Projects</a>
+                    </li>
+                    <li class="nav__link">
+                        <a href="../CV.html" class="
+                            nav__link--anchor
+                            link__hover-effect
+                            link__hover-effect--black
+                        ">Curriculum Vitae (CV)</a>
+                    </li>
+                    <li class="nav__link">
+                        <a href="../Manufacturing.html" class="
+                            nav__link--anchor
+                            link__hover-effect
+                            link__hover-effect--black
+                        ">Manufacturing</a>
+                    </li>
+                    <li class="nav__link">
+                        <a href="../Art.html" class="
+                            nav__link--anchor
+                            link__hover-effect
+                            link__hover-effect--black
+                        ">Art</a>
+                    </li>
+                    <li class="nav__link">
+                        <a href="mailto:nathanchunny@gmail.com" class="
+                            nav__link--anchor
+                            nav__link--anchor-primary
+                        ">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="hero__content">
+                
+                <p class="pdf-title">Analysis of Fin Separation on Convective Heat Transfer</p>
+                <!-- <img src="../Media/Projects/projects_title_alt.jpg" alt="Projects" class="hero__img">
+                <div class = "hero__caption">
+                    On the grind.
+                </div> -->
+                May 2025
+            </div>
+        </header>
+        <section class ="content-list">
+<div class="content-item" id="Analysis of Fin Separation on Convective Heat Transfer">
+            <!-- <div class="content-item-title">Analysis of Fin Separation on Convective Heat Transfer - Mathematical Analysis, Experimental Design, MATLAB, LabView</div> -->
+            <div class="content-item-inner">
+                <img src="../Media/Projects/heat_sink_exp.jpg" alt="heat sink experiment">
+                <div class="content-caption">
+                    Experimental setup for measuring temperature at the base, middle, and tips of fins.  Fan with nozel (left) was 
+                    used for forced convection.
+                </div>
+                <div class="content-item-content">
+                    <div class="content-item-desc">
+                        To test the effects of fin spacing on heat transfer rate, my team and I proposed and executed a simple experiment.
+                        The main pieces of equipment were a custom machined heat sink and a hot plate. The heat sink was designed to be modular, where
+                        the fins could easily be attached and reattached to the base plate at various spacings. The hot plate was set to a constant temperature, and 
+                        the heat sink was allowed to reach steady state before measurements were taken.
+                    </div>
+                    <img src="../Media/Projects/heat_sink.jpg" alt="heat sink">
+                    <div class="content-caption">
+                        Custom aluminum heat sink with modular fins freshly machined on the HAAS VF-2 mill.
+                    </div>
+                    <div class="content-item-desc">
+                        Forced convection trials were performed with a fan and nozzle and were compared with natural 
+                        convection cases.  Thermocouples were used to probe the temperatures at the base, middle, and tips of the fins. A custom
+                        LabView virtual instrument was created to visualize temperature over time and determine when steady state was reached.  
+                        Using the Churchill and Chu Correlation, the Nusseult Number (Nu) and subsequently the convective heat transfer coefficient (h) were 
+                        calculated for each trial.  
+                    </div>
+                    <div class="center-math">
+                        \(h=\frac{Nu(L)}{k}\)
+                    </div>
+                    <div class="content-item-desc">
+                        Then, natural convection heat transfer rate (Q) could be calculated as
+                    </div>
+                    <div class="center-math">
+                        \(Q=hA(T_b-T_\infty)\)
+                    </div>
+                    <div class="content-item-desc">
+                        where \(T_b\) is the base temperature, \(T_\infty\) is the ambient temperature, and \(A\) is the surface area of the fin.
+                    </div>
+                    <div class="content-item-desc">    
+                        Temperature gradient was found with the 1D fin approximation
+                    </div>
+                    <div class="center-math">
+                        \(\frac{d^2\theta}{dx^2}-m^2\theta=0\)
+                    </div>
+                    <div class="content-item-desc">
+                        where \(\theta=\frac{T-T_\infty}{T_b-T_\infty}\) is the non-dimensional temperature, \(m=\sqrt{\frac{hP}{kA_c}}\) is the fin parameter, 
+                        \(P\) is the perimeter, \(A_c\) is the cross-sectional area, and \(k\) is the thermal conductivity of the fin material.
+                    </div>
+                    <div class="content-item-desc">    
+                        Comparing the temperature gradients and heat transfer rates (Q) calculated with the 1D fin approximation for each trial, we found that the fin heat dissipation effectiveness dramatically decreased at sufficiently small and large fin spacings.
+                    </div>
+                    <img src="../Media/Projects/heat_sink_results_natural_conv.png" alt="heat sink">
+                    <div class="content-caption">
+                        (a) Temperature gradients for natural convection cases.  As fin pitch increases, base temperature generally decreases 
+                        and gradients become steeper.  (b) Convective heat transfer coefficient (b) Q plot for each fin spacing, 
+                        which shows a sharp 2-fold increase in efficiency at 3.5 fin widths.  There is a subsequent decrease in efficiency at 
+                        7 fin widths, indicating that beyond a certain fin spacing, more fins are needed.
+                    </div>
+                    <div class="content-item-desc">
+                        These natural convection results fit expectations, because intuitively, heat is trapped when fins are too close, preventing
+                        effective heat dissipation and violating assumptions.  For example, \(T_\infty\) was assumed uniform and constant, but this is 
+                        no longer true at sufficiently small spacings.  On the other hand, at large spacings, each fin must dissipate more heat for a 
+                        larger portion of the base, which also reduces effectiveness.
+                    </div>
+                    <div class="content-item-desc">
+                        Analysis of forced convection trails was less straightforward due to complicated dynamics and unideal experimental conditions among other factors.
+                        However, we found that fin effectiveness stayed relatively constant for all spacings and temperature gradients weere much steeper than natural convection cases.
+                    </div>
+                    <img src="../Media/Projects/heat_sink_results_forced_conv.png" alt="heat sink">
+                    <div class="content-caption">
+                        Forced convection temperature gradients and heat transfer rates (Q). Q stayed relatively constant across all fin spacings and 
+                        temperature gradients were steeper than natural convection cases. 
+                    </div>
+                    <div class="content-item-desc">
+                        The steeper temperature gradients are due to increased heat dissipation from forced convection.  The constant Q values across fin spacings
+                        indicate that fin spacing does not significantly affect heat dissipation in forced convection cases, which is likely due to the prevention of heat
+                        accumulation between fins by the air flow.
+                    </div>
+                    <div class="content-item-desc">
+                        Overall, results matched expectations and the optimal fin spacing was found to be ~3.5 fin widths for natural convection cases.  We acknowledge that
+                        our experiment was limited by factors such as the imprecise temperature measurement methods and non-uniform airflow across all fins.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </section>
+        
+        <footer>
+            <div class="footer__row">
+                <!-- # makes the item into a link that scrolls to top of page -->
+                <a href="#top" class="footer__anchor" id=""> 
+                    <figure class="footer__logo">
+                        <img src="../Media/Professional/NC.png" class="footer__logo--img" alt="">
+                    </figure>
+                    <span class="footer__logo--popper">
+                        Top
+                        <i class="fas fa-arrow-up"></i>
+                    </span>
+                </a>
+                <div class="footer__social--list">
+                    <a href="https://linkedin.com/in/nathanchun" class=
+                    "footer__social--link
+                    link__hover-effect--white" target="blank">LinkedIn</a>
+                    <a href="https://github.com/Nathan-Chun" class=
+                    "footer__social--link
+                    link__hover-effect--white" target="blank">Github</a>
+                    <a href="mailto:nathanchunny@gmail.com" class=
+                    "footer__social--link
+                    link__hover-effect--white" target="blank">Email</a>
+                    <a href="../Professional_Documents/Nathan_Chun_Mechatronics_Engineer_2025.pdf" class=
+                    "footer__social--link
+                    link__hover-effect--white" target="blank" download>Resume</a>
+                </div>
+            </div>
+        </footer>
+        </section>
+    <script src="../nav.js"></script>
+    </body>
+</html>

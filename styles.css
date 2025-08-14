@@ -15,6 +15,10 @@ body {
     min-height: 100vh;
 }
 
+p {
+  margin-bottom: 1.5em; /* Adjust value for more or less space */
+}
+
 /*Smooth Scrolling*/
 html{
     scroll-behavior: smooth;
@@ -214,6 +218,7 @@ a,
 .about__content p {
     font-size: 1.1rem;
     color: #444;
+    /* margin-bottom: 2em; */
 }
 
 .about__content .hero__links {
@@ -313,6 +318,13 @@ a,
     letter-spacing: 0.5px;
 }
 
+.content-page-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
 .content-item-inner {
     display: flex;
     flex-direction: column;
@@ -322,6 +334,26 @@ a,
     max-width: 1200px;      /* Set your preferred card width */
     margin: 0 auto;        /* Center the card */
     padding: 18px;
+    box-sizing: border-box;
+}
+
+.content-item-inner {
+    max-width: 98vw;
+    padding: 8px;
+}
+.content-item-inner video,
+.content-item-inner img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 98vw;
+    height: auto;
+}
+.content-item-inner pre {
+    width: 100%;
+    max-width: 98vw;
+    overflow-x: auto;
     box-sizing: border-box;
 }
 
@@ -550,4 +582,5 @@ footer {
     .pdf-container{
         width: 500px;
     }
+
 }

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nathan Chun</title>
+        <!-- Scale based on device screen width -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../favicon/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" href="../favicon/apple-touch-icon.png">
+        <link rel="android-chrome-512x512" href="../favicon/android-chrome-512x512.png">
+        <link rel="android-chrome-192x192" href="../favicon/android-chrome-192x192.png">
+        <link rel="favicon-16x16" href="../favicon/favicon-16x16.png">
+        <link rel="favicon-32x32" href="../favicon/favicon-32x32.png">
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <!-- <script type="text/javascript">
+            window.MathJax = {
+                tex: {
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                    packages: ['base', 'ams']
+                },
+                svg: {
+                    fontCache: 'global'
+                }
+            };
+        </script>
+        <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script> -->
+
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                processEscapes: true
+                }
+            });
+            </script>
+                
+            <script type="text/javascript"
+                    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+            </script>
+    </head>
+    <body>
+        <a id="top"></a>
+        <section>
+            <nav>
+                <div class = "personal__logo"><a href="../index.html"><span class="text--color">Nathan Chun | 陳乃誠</span></a></div>
+                <button id="navToggle" class="nav__toggle">&#9776;</button>
+                <ul class="nav__link--list" id = "navLinks">
+                    <li class="nav__link">
+                        <a href="../research.html"class="
+                            nav__link--anchor
+                            link__hover-effect
+                            link__hover-effect--black
+                        ">Research</a>
+                    </li>
+                    <li class="nav__link">
+                        <a href="../Projects.html"class="
+                            nav__link--anchor
+                            link__hover-effect
+                            link__hover-effect--black
+                            nav__link--current
+                        ">Projects</a>
+                    </li>
+                    <li class="nav__link">
+                        <a href="../CV.html" class="
+                            nav__link--anchor
+                            link__hover-effect
+                            link__hover-effect--black
+                        ">Curriculum Vitae (CV)</a>
+                    </li>
+                    <li class="nav__link">
+                        <a href="../Manufacturing.html" class="
+                            nav__link--anchor
+                            link__hover-effect
+                            link__hover-effect--black
+                        ">Manufacturing</a>
+                    </li>
+                    <li class="nav__link">
+                        <a href="../Art.html" class="
+                            nav__link--anchor
+                            link__hover-effect
+                            link__hover-effect--black
+                        ">Art</a>
+                    </li>
+                    <li class="nav__link">
+                        <a href="mailto:nathanchunny@gmail.com" class="
+                            nav__link--anchor
+                            nav__link--anchor-primary
+                        ">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="hero__content">
+                
+                <p class="pdf-title">Cart-Pole Stabilization</p>
+                <!-- <img src="../Media/Projects/projects_title_alt.jpg" alt="Projects" class="hero__img">-->
+                <!-- <div class = "hero__caption"> -->
+                    August 2025
+                <!-- </div>  -->
+            </div>
+        </header>
+        <section class ="content-list">
+<div class="content-item" id="Cart Pole Stabilization">
+            <!-- <div class="content-item-title">Analysis of Fin Separation on Convective Heat Transfer - Mathematical Analysis, Experimental Design, MATLAB, LabView</div> -->
+            <div class="content-item-inner">
+                <div class="content-item-content">
+                    <div class="content-page-title">
+                       I. Simulation
+                    </div>
+                    <div class="content-item-desc">
+                        <p>Given the abundance of sources detailing cart-pole dynamics derivations, I'll focus on the implementation aspects of this project.  
+                        In broad strokes, the underlying mathematical model employs the Euler-Lagrange formulation with several simplifying assumptions including frictionless motion,
+                        small angle approximation, rigid body dynamics, and constrained motion along the x-axis.  Though idealized, these assumptions capture the 
+                        essential dynamics needed for controller design.</p>
+
+                        <p>Modern robotics simulations span a range of tools and languages.  High-performance frameworks like MuJoCo and visualization frameworks like MeshCat offer sophisticated 
+                        capabilities, often implemented in Julia, C++, or Python for computational efficiency and flexibility.  For this project, I selected MATLAB with Simulink and Simscape
+                        as the simulation platform, because they provide integrated control toolboxes and an intuitive interface that allows for rapid prototyping and a natural progression from 
+                        math to simulation.  The subpar performance and efficiency of MATLAB was not a concern for this educational project.</p>
+
+                        <p>The code is streamlined, focusing on essential components for LQR control including system parameters, state-space representation, cost function weights,
+                            and calling the MATLAB built-in LQR solver.  </p>
+
+                        <div style="overflow-x:auto;background:#282c34;border-radius:8px;margin:1em 0;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+                                    <pre style="width:100%;overflow-x:auto;background:#fff; border-radius:8px; margin:1em 0; box-shadow:0 2px 8px rgba(0,0,0,0.08); margin:0;padding:1em;font-family:'Fira Mono','Consolas','Menlo',monospace;font-size:1em;color:#222;">
+clear all; clc;
+nx = 4;
+nu = 1;
+
+% Target state
+xf = [0; 0; 0; 0]; % p, q, dp, dq
+
+% IC
+x0 = [0 0 0 0] + [0, 35 0, 0];
+
+% state space matrices
+M = 0.1813;
+m=0.0454;
+l=0.127;
+% l=0.3;
+g=9.81;
+
+A = [0 0 1 0;
+    0 0 0 1;
+    0 m*g/M 0 0;
+    0 (m*g + M*g)/(M*l) 0 0];
+B = [0;0;1/M;1/(M*l)];
+C = eye(4);
+D = 0;
+
+% Check controllability (rank = # of states)
+controllability = rank(ctrb(A, B))
+
+% Stability (has one positive and one negative, so system is unstable)
+eig(A)
+
+% ss system
+cartpole = ss(A,B,C,D);
+
+Q = diag([100 100 10 10]);
+R = 1; 
+
+K = lqr(cartpole, Q, R)
+                        </div>
+                        <p>I initially attempted to implement the infinite-horizon LQR (ihlqr)manually using the discrete time algebraic Riccati equation, but this custom implementation
+                            failed to produce suitable gains.  The custom ihlqr function is shown below.</p>
+
+                        <div style="overflow-x:auto;background:#282c34;border-radius:8px;margin:1em 0;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+                                    <pre style="width:100%;overflow-x:auto;background:#fff; border-radius:8px; margin:1em 0; box-shadow:0 2px 8px rgba(0,0,0,0.08); margin:0;padding:1em;font-family:'Fira Mono','Consolas','Menlo',monospace;font-size:1em;color:#222;">
+%% Infinite horizon LQR
+% Demonstrates Ricatti Recursion, but doesn't actually work, because
+% of linearization of dynamics and difference between internals of MATLAB
+% lqr() function and this ihlqr function
+function [S, K] = ihlqr(A, B, Q, R, max_iter, tol)
+    % Default iter and tol
+    if nargin<6
+        tol = 1e-6;
+    end
+    if nargin<5
+        max_iter = 1000;
+    end
+
+    % Declare S 
+    S = Q*1.0;
+
+    for ricatti_iter = 1:max_iter
+        K = (R+B'*S*B)\(B'*S*A);
+        newS = Q + K'*R*K + (A - B*K)'*S*(A - B*K);
+        if norm(S-newS, Inf) < tol
+            fprintf("Converged after %d iterations\n", ricatti_iter);
+            S = newS; 
+            K = reshape(K,1,[]);
+            return;
+        end
+        S = newS;
+    end
+
+    error("Did not converge")
+end
+                        </div>
+                        <p>Upon further investiation, I suspect several factors contributed to this discrepancy, the first of which was the use
+                            of the discrete time rather than continuous time Riccati equation.  Additionally, MATLAB's solver incorporates advanced numerical methods such as Eigenvalue
+                            decomposition, more sophisticated variable initialization strategies, and other techniques that ensure numerical stability and convergence.  Sticking to
+                            using MATLAB's lqr() function, I obtained the gain K and used it in the full-state feedback controller shown below.  </p>
+                        <img src="../Media/Projects/cartpole_block_diagram.png" alt="cart-pole block diagram">
+                        <div class="content-caption">
+                            Cart-pole Simulink block diagram.  
+                        </div> 
+                        <p>The final simulation result is shown below where the cart begins at a 35 degree angle.  The cart is also perturbed with a step input at 5s.</p>
+                        <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+                            <video controls loop muted autoplay style="display: block; margin: auto; width: 100%; max-width: 700px; height: auto; object-fit: contain; object-position: center; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 4px solid #e0e0e0;">
+                                <source src="../Media/Projects/cartPole_sim.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="content-caption">
+                            Cart-pole simulation result starting with initial angle of 35 degrees and perturbed with a step input at 5s.
+                        </div>
+                    </div>
+                    
+                    <!-- Design -->
+                    <div class="content-page-title">
+                       II. Design
+                    </div>
+                    <div class="content-item-desc">
+                        <p>As a student balancing research commitments and graduate applications on a limited budget, I prioritized simplicity and cost-effectiveness.  The challenge was to create a functional 
+                        cart-pole system that could validate control theory concepts without hurting my wallet or taking up too much time.</p>
+
+                        <p>
+                            The system is essentially a belt-driven cart traveling along an aluminum extrusion rail, which is the most minimal configuration I could envision.  The structural components were machined from scrap metal available at the 
+                            Baum Family Makerspace where I worked as a student machinist.  Standard screws, T-nuts, washers, hex nuts, and even the aluminum extrusion were also sourced from the Makerspace.  Since I planned to personally manufacture the custom
+                            components, I made most features planar.  This allowed most features to be cut out quickly on a waterjet with minimal manual and CNC machining required.  The full design is shown below.
+                        </p>
+
+                        <img src="../Media/Projects/cartpole_cad.png" alt="cart-pole block diagram">
+                        <div class="content-caption">
+                            Cart-pole CAD.  
+                        </div> 
+
+                        <p>
+                            Initially, I considered purchasing a commercial linear gude rail with integrated slider like the HIWIN MG series.  However, even knockoffs sell for north of $60, which was enough motivation
+                            to design and machine the cart-rail system myself.  Conveniently, this experience was also exposed me to mechanical components and machining limitations that I'd never seen or considered before. The custom cart features wheels designed to ride
+                            along the extrusion channels.  While this is conceptually sound, I neglected the careful tolerancing and key components for smooth and rigid translational motion.  Therefore, my cart wobbled during operation as shown below, which 
+                            became a primary source of disturbance in the final system, directly impacting performance.
+                        </p>
+                        <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+                            <video controls loop muted autoplay style="display: block; margin: auto; width: 100%; max-width: 700px; height: auto; object-fit: contain; object-position: center; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 4px solid #e0e0e0;">
+                                <source src="../Media/Projects/cartpole_wobble.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="content-caption">
+                            Cart-pole wobble due to poor tolerancing and improper component selection.
+                        </div>
+                        <p>
+                            Another source of disturbance was the insufficient stiffness at the pole-encoder junction.  The first iteration of the junction was designed as two main sections, which resulted in substantial wiggling as shown below.
+                        </p>
+                        <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+                            <video controls loop muted autoplay style="display: block; margin: auto; width: 100%; max-width: 700px; height: auto; object-fit: contain; object-position: center; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 4px solid #e0e0e0;">
+                                <source src="../Media/Projects/cartpole_junction_wiggle.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="content-caption">
+                            Unacceptable wiggling of the encoder-pole junction, warrenting a redesign.  
+                        </div>
+
+                        <p>
+                            In the second design, the components of the junction were split differently to ensure rigidity at crucial sections.  The result shown below was a significant improvement
+                            from the first iteration, but still allowed for some play around the encoder shaft. This mechanical flexibiity likely contributed to measurement noise and system identification challenges.
+                        </p>
+                        <img src="../Media/Projects/cartpole_junction_v2.jpg" alt="cart-pole junction v2">
+                        <div class="content-caption">
+                            Cart-pole junction v2.  Parts were slightly enlarged and split locations were chosen to maximize rigidity.   
+                        </div> 
+                        <p>
+                            This development phase highlights the univeral engineering dilema of balancing balancing cost, performance, and time.  While budget friendly choices resulted in a functional system, many issues that emerged
+                            could've been avoided with more expensive commerical components.
+                    </div>
+
+                    <!-- Manufacturing -->
+                    <div class="content-page-title">
+                       III. Manufacturing
+                    </div>
+                    <div class="content-item-desc">
+                       My design for manufacturing (DFM) mindset paid off in the swift fabrication process.  Beginning with the encoder-pole junction and timing belt clamps, the complex, compact geometries, led me to choose 3D printing
+                       for rapid prototyping and cost efficiency. 
+                    </div>
+
+                    <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+                        <video controls loop muted autoplay style="display: block; margin: auto; width: 100%; max-width: 700px; height: auto; object-fit: contain; object-position: center; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 4px solid #e0e0e0;">
+                            <source src="../Media/Projects/cartpole_3d_print.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="content-caption">
+                        3D printing the more intricate system components.
+                    </div>
+
+                    <div class="content-item-desc">
+                       The cart plate and mounting components were mostly done on the Makerspace OMAX waterjet.  However, the waterjet's tapered kerf rendered the clearance screw holes unusable, necessitating
+                       further machining on the Haas VF-2 CNC mill.  I'm grateful to <a href="https://www.linkedin.com/in/cesar-renteria-a609a6249/" class="text-links" target="blank">Cesar Renteria</a>, my Makerspace supervisor, for his guidance and assistance during the CNC programming and setup process.
+                    </div>
+
+                    <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+                        <video controls loop muted autoplay style="display: block; margin: auto; width: 100%; max-width: 700px; height: auto; object-fit: contain; object-position: center; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 4px solid #e0e0e0;">
+                            <source src="../Media/Projects/cartpole_waterjet.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="content-caption">
+                        Waterjetting 2D profiles of my custom parts.
+                    </div>
+                    
+                    <div class="content-item-desc">
+                       The pendulum mass was turned on a Hardinge manual lathe from mild steel stock.  Material selection was based on density (higher than aluminum)
+                       to maximize the pendulum's moment of inertia, while remaining substantially more machinable than stainless steel.
+                    </div>
+
+                    <img src="../Media/Projects/cartpole_lathe.png" alt="cart-pole lathe">
+                    <div class="content-caption">
+                        Turning mild steel stock on a manual lathe to create my pendulum mass. 
+                    </div> 
+
+                    <!-- Electronics and Programming -->
+                    <div class="content-page-title">
+                       IV. Electronics & Programming
+                    </div>
+                    <div class="content-item-desc">
+                       <p>To implement the LQR controller, I needed to track the full-state $\mathbf{x} = \begin{bmatrix} p & v & \theta & \omega \end{bmatrix}^T$ where \(p\) and \(v\) are the cart's linear position and velocity.
+                       \(\theta\) and \(\omega\) are the pendulum angle and angular velocity.  For this, I used two 600 pulse-per-revolution (p/r) encoders with one mounted on the cart and another directly measuring linear motion via the drive pulley.
+                       Both encoders had quadrature output (2 pins), giving 4x resolution and yeilding 2400p/r.  This resulted in an angular resolution of 2\(\pi\)/2400rad/p.  The conversion factor to linear distance for the cart position encoder depended on the drive
+                       pulley circumference.  With a pulley diameter \(d\) mm, the linear conversion factor was \(c=(\pi d)\)/2400 mm/p.</p>
+
+                       <p>The motor was controlled with a TB6612FNG dual motor drier, chosen for it's adequate current handling and ready availability. To manage the computational load and minimize control latency, I distributed the processing accross two Arduino microcontrollers
+                       communicating via I2C.  The controller Arduino runs the LQR algorithm, manages I2C communication, and outputs PWM motor commands.  The sensor Arduino processes pendulum encoder readings.</p>
+
+                    <img src="../Media/Projects/cartpole_electronics.jpg" alt="cart-pole lathe">
+                    <div class="content-caption">
+                        Electronics setup prior to assembling the full system.  
+                    </div> 
+
+                    <p>
+                        A critical challenge in bringing simultion to the real world was converting the LQR controller's force output to appropriate motor commands.  The inexpensive motor
+                        lacked torque constant specifications, necessitating empirical calibration.  The straightforward approach I devised to establish the force-PWM relationship involved (1) applying 
+                        a constant PWM signal for 1s (2) measuring the distance traveled (3) calculating acceleration as $a = distance/(1s)^2$ (4) determining applied force $F=ma$ where $m$ is the cart mass.
+                        Testing was performed at four PWM values each with three trials.
+                    </p>
+
+                    <img src="../Media/Projects/cartpole_pwm_force_plot.png" alt="cart-pole lathe">
+                    <div class="content-caption">
+                        PWM v Force plot showing a linear relationship, indicating that the slope can be directly used as the conversion factor.  
+                    </div> 
+
+                    <p>
+                        As shown in the figure above, the PWM-force relation was linear with a conversion factor equal to the fitted line's slope.  However, these trials were done only for motion to the right. Leftward 
+                        actuation trials revealed asymetry likely stemming from mechanical factors including belt tension variations and friction differences from the wobbliness of the cart.  While this hardware limitation could compromise 
+                        LQR performance, I proceeded with implementation using the rightward calibration data, acknowledging that directional compensation may be necessary in future iterations.
+                    </p>
+
+                    <p>
+                        The software implementation largely consists of data processing.  The controller Arduino compiles the state vector and computes the LQR control law $u=-Kx$, applies the force-PWM conversion, and 
+                        outputs the motor command.  The code can be accessed on the project <a href="https://github.com/Nathan-Chun/Cart_Pole" class="text-links" target="blank">GitHub repo</a>.
+                    </p>
+
+                    </div>
+
+                    <!-- Results -->
+                    <div class="content-page-title">
+                       V. Results
+                    </div>
+                    <div class="content-item-desc">
+                       The completed inverted pendulum system was mounted on a table edge using C-clamps, with aluminum stock plates providing clearance to prevent the cart wheels from contacting the table surface. 
+                       Despite efforts to minimize costs, the final system totaled approximately \$170, which significantly exceeds the initial \$100 budget target.
+                    </div>
+
+                    <img src="../Media/Projects/cartpole_complete.jpg" alt="cart-pole complete assembly">
+                    <div class="content-caption">
+                        Complete cart-pole assembly.
+                    </div> 
+
+                    <div class="content-item-desc">
+                       Zero shot deployment of the LQR controller failed to achieve stabilization.  Even after manual gain tuning attempts, the system consistently destabilized within seconds of operation.
+                    </div>
+                    <div class="content-item-desc">
+                        <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+                            <video controls loop muted autoplay style="display: block; margin: auto; width: 100%; max-width: 700px; height: auto; object-fit: contain; object-position: center; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 4px solid #e0e0e0;">
+                                <source src="../Media/Projects/cartpole_trial.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="content-caption">
+                            Zero shot deployment of LQR controller on real system.  System doesn't stabilize and excessive vibration and wobbling can be observed. 
+                        </div>
+                    </div>
+                    <div class="content-item-desc">
+                        The primary failure mode waslikely excessive mechanical compliance in the cart assembly.  As anticipated during the design phase, the decision to build a custom cart rather than invest in 
+                        a precision linear guide rial introduced critical performance limitations.  Some major mechanical issues include cart wobble from loose tolerances and vibration amplification.  During testing,
+                        the vibrations and wobbling were severe enough to loosen some fasteners during operation.  Due to non-rigid coupling between the encoder shaft and plastic junction, zero position readings were 
+                        inconsistent leading to encoder drift.
+                    </div>
+                    <div class="content-item-desc">
+                        I attempted to mitigate cart wobble by using eccentric nuts which enable tighter wheel engagement, but they were incompatible with the purchased wheels.  The addition of washers and mechanical modifications
+                        to wheel assemblies also failed to substantially improve cart stability.
+                    </div>
+
+                    <!-- Discussion -->
+                    <div class="content-page-title">
+                       VI. Discussion
+                    </div>
+                    <div class="content-item-desc">
+                       This project highlighted the importance of mechanical precision in control systems implementation.  The attempt to minimize costs by substituting precision components with improvised alternatives
+                       created fundamental limitations that control tuning couldn't overcome.
+                    </div>
+                    <div class="content-item-desc">
+                       Careful component selection would likely have resolved many of the mechanical imperfections that propogated through and caused instabilities in 
+                       the closed-loop control system.  Analyzing commercial linear motion systems, including CNC machines and 3D printers, reveals standard practices such as the use of 
+                       eccentric nuts, linear bearings, and precision rails.  Furthermore, post-project research revealed that commercial barebones cart assemblies on Amazon cost less than the 
+                       individual wheels purchased from McMaster-Carr. 
+                    </div>
+                    <div class="content-item-desc">
+                       Future work will be focused on redesigning the cart and encoder-pole junction.  Dampening elements may also be added reduce vibration that may resonate and lead to instability.
+                       Though many tutorials online demonstrate the use of LQR for cart-pole systems, I may try try to implement more robust algorithms such as model predictive control (MPC).  While current results are disappointing,
+                       this experience provided valuable lessons on mechanical design, system integration, and failure analysis.  As I return focus to research activities, this project remains on hold with a clear roadmap for 
+                       successful completion once proper mechanical components are acquired.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </section>
+        
+        <footer>
+            <div class="footer__row">
+                <!-- # makes the item into a link that scrolls to top of page -->
+                <a href="#top" class="footer__anchor" id=""> 
+                    <figure class="footer__logo">
+                        <img src="../Media/Professional/NC.png" class="footer__logo--img" alt="">
+                    </figure>
+                    <span class="footer__logo--popper">
+                        Top
+                        <i class="fas fa-arrow-up"></i>
+                    </span>
+                </a>
+                <div class="footer__social--list">
+                    <a href="https://linkedin.com/in/nathanchun" class=
+                    "footer__social--link
+                    link__hover-effect--white" target="blank">LinkedIn</a>
+                    <a href="https://github.com/Nathan-Chun" class=
+                    "footer__social--link
+                    link__hover-effect--white" target="blank">Github</a>
+                    <a href="mailto:nathanchunny@gmail.com" class=
+                    "footer__social--link
+                    link__hover-effect--white" target="blank">Email</a>
+                    <a href="../Professional_Documents/Nathan_Chun_Mechatronics_Engineer_2025.pdf" class=
+                    "footer__social--link
+                    link__hover-effect--white" target="blank" download>Resume</a>
+                </div>
+            </div>
+        </footer>
+        </section>
+    <script src="../nav.js"></script>
+    </body>
+</html>

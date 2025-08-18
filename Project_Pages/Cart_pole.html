@@ -110,7 +110,7 @@
             </div>
         </header>
         <section class ="content-list">
-<div class="content-item" id="Cart Pole Stabilization">
+            <div class="content-item" id="Cart Pole Stabilization">
             <!-- <div class="content-item-title">Analysis of Fin Separation on Convective Heat Transfer - Mathematical Analysis, Experimental Design, MATLAB, LabView</div> -->
             <div class="content-item-inner">
                 <div class="content-item-content">
@@ -217,8 +217,8 @@ end
                             Cart-pole Simulink block diagram.  
                         </div> 
                         <p>The final simulation result is shown below where the cart begins at a 35 degree angle.  The cart is also perturbed with a step input at 5s.</p>
-                        <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
-                            <video controls loop muted autoplay style="display: block; margin: auto; width: 100%; max-width: 700px; height: auto; object-fit: contain; object-position: center; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 4px solid #e0e0e0;">
+                        <div>
+                            <video controls loop muted autoplay>
                                 <source src="../Media/Projects/cartPole_sim.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -253,8 +253,8 @@ end
                             along the extrusion channels.  While this is conceptually sound, I neglected the careful tolerancing and key components for smooth and rigid translational motion.  Therefore, my cart wobbled during operation as shown below, which 
                             became a primary source of disturbance in the final system, directly impacting performance.
                         </p>
-                        <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
-                            <video controls loop muted autoplay style="display: block; margin: auto; width: 100%; max-width: 700px; height: auto; object-fit: contain; object-position: center; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 4px solid #e0e0e0;">
+                        <div>
+                            <video controls loop muted autoplay>
                                 <source src="../Media/Projects/cartpole_wobble.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -266,7 +266,7 @@ end
                             Another source of disturbance was the insufficient stiffness at the pole-encoder junction.  The first iteration of the junction was designed as two main sections, which resulted in substantial wiggling as shown below.
                         </p>
                         <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
-                            <video controls loop muted autoplay style="display: block; margin: auto; width: 100%; max-width: 700px; height: auto; object-fit: contain; object-position: center; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 4px solid #e0e0e0;">
+                            <video controls loop muted autoplay>
                                 <source src="../Media/Projects/cartpole_junction_wiggle.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -297,8 +297,8 @@ end
                        for rapid prototyping and cost efficiency. 
                     </div>
 
-                    <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
-                        <video controls loop muted autoplay style="display: block; margin: auto; width: 100%; max-width: 700px; height: auto; object-fit: contain; object-position: center; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 4px solid #e0e0e0;">
+                    <div>
+                        <video controls loop muted autoplay>
                             <source src="../Media/Projects/cartpole_3d_print.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -311,9 +311,8 @@ end
                        The cart plate and mounting components were mostly done on the Makerspace OMAX waterjet.  However, the waterjet's tapered kerf rendered the clearance screw holes unusable, necessitating
                        further machining on the Haas VF-2 CNC mill.  I'm grateful to <a href="https://www.linkedin.com/in/cesar-renteria-a609a6249/" class="text-links" target="blank">Cesar Renteria</a>, my Makerspace supervisor, for his guidance and assistance during the CNC programming and setup process.
                     </div>
-
-                    <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
-                        <video controls loop muted autoplay style="display: block; margin: auto; width: 100%; max-width: 700px; height: auto; object-fit: contain; object-position: center; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 4px solid #e0e0e0;">
+                    <div>
+                        <video controls loop muted autoplay>
                             <source src="../Media/Projects/cartpole_waterjet.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -392,16 +391,14 @@ end
                     <div class="content-item-desc">
                        Zero shot deployment of the LQR controller failed to achieve stabilization.  Even after manual gain tuning attempts, the system consistently destabilized within seconds of operation.
                     </div>
-                    <div class="content-item-desc">
-                        <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
-                            <video controls loop muted autoplay style="display: block; margin: auto; width: 100%; max-width: 700px; height: auto; object-fit: contain; object-position: center; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border: 4px solid #e0e0e0;">
-                                <source src="../Media/Projects/cartpole_trial.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                        <div class="content-caption">
-                            Zero shot deployment of LQR controller on real system.  System doesn't stabilize and excessive vibration and wobbling can be observed. 
-                        </div>
+                    <div>
+                        <video controls loop muted autoplay>
+                            <source src="../Media/Projects/cartpole_trial.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="content-caption">
+                        Zero shot deployment of LQR controller on real system.  System doesn't stabilize and excessive vibration and wobbling can be observed. 
                     </div>
                     <div class="content-item-desc">
                         The primary failure mode waslikely excessive mechanical compliance in the cart assembly.  As anticipated during the design phase, the decision to build a custom cart rather than invest in 

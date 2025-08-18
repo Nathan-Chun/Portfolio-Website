@@ -582,5 +582,17 @@ footer {
     .pdf-container{
         width: 500px;
     }
+}
+/* Responsive breakpoints */
+@media (max-width: 1200px) {
+    .content-list {
+        max-width: 70%;
+    }
+}
 
+@media (max-width: 768px) {
+    .content-list {
+        max-width: 90%;
+        padding: 0 16px;
+    }
 }

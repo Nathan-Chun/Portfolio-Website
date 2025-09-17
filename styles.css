@@ -1,10 +1,44 @@
 /* Base styles */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+/* Font is loaded via a <link> in the HTML head to avoid CSS @import render-blocking */
 * {
     font-family: 'Lato', Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* Prefer reduced motion for users who request it */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        scroll-behavior: auto;
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+/* Ensure images reserve space to prevent layout shift */
+img, video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16/9; /* reasonable default; individual images can override */
+}
+
+/* Small images (e.g., logo) override aspect ratio */
+.footer__logo--img {
+    aspect-ratio: 1/1;
+}
+
+/* Utility: preserve full image (no crop).
+     Use by adding `class="image--preserve"` to an <img> tag. */
+.image--preserve,
+.img--preserve {
+    object-fit: contain !important;
+    aspect-ratio: auto !important;
+    /* don't force a width so small UI logos aren't enlarged */
+    width: auto !important;
+    height: auto !important;
+    max-height: none !important;
 }
 
 body {
@@ -453,11 +487,22 @@ footer {
     gap: 12px;
 }
 
-.footer__logo--img {
-    width: 60px;
-    height: 60px;
+.footer__logo--img,
+.footer__logo--img.image--preserve {
+    /* ensure footer logos stay small even when image--preserve is applied */
+    width: 60px !important;
+    height: 60px !important;
     border-radius: 50%;
     margin-bottom: 0px;
+}
+
+/* Slightly smaller logo on very small screens */
+@media (max-width: 480px) {
+    .footer__logo--img,
+    .footer__logo--img.image--preserve {
+        width: 32px !important;
+        height: 32px !important;
+    }
 }
 
 .footer__anchor:focus{

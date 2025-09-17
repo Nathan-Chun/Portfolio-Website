@@ -2,29 +2,28 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Nathan Chun</title>
-        <!-- Scale based on device screen width -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathan Chun</title>
+    <!-- Scale based on device screen width -->
         <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon">
         <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
         <link rel="android-chrome-512x512" href="/favicon/android-chrome-512x512.png">
         <link rel="android-chrome-192x192" href="/favicon/android-chrome-192x192.png">
         <link rel="favicon-16x16" href="/favicon/favicon-16x16.png">
         <link rel="favicon-32x32" href="/favicon/favicon-32x32.png">
-        <link rel="stylesheet" href="./styles.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-        <script id="MathJax-script" async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-        </script>
+    <!-- Load Google Fonts without using CSS @import (avoids render-blocking import inside CSS) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <!-- Use the Font Awesome stylesheet only (avoid the kit script which loads extra JS) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     </head>
     <body>
         <a id="top"></a>
         <section>
             <nav>
-                <div class = "personal__logo"><a href="index.html"><span class="text--color">Nathan Chun | 陳乃誠</span></a></div>
+                <div class = "personal__logo"><a href="index.html"><span class="text--color">Nathan Chun</span></a></div>
                 <button id="navToggle" class="nav__toggle">&#9776;</button>
                 <ul class="nav__link--list" id = "navLinks">
                     <li class="nav__link">
@@ -78,10 +77,10 @@
             <div class="hero__content">
                 
                 <p class="pdf-title">Projects</p>
-                <img src="./Media/Projects/projects_title_alt.jpg" alt="Projects" loading = "lazy" class="hero__img">
+                <!-- <img src="./Media/Projects/projects_title_alt.jpg" alt="Projects" fetchpriority="high" decoding="async" class="hero__img image--preserve">
                 <div class = "hero__caption">
-                    On the grind.
-                </div>
+                    On the grind. -->
+                <!-- </div> -->
             </div>
         </header>
 
@@ -111,7 +110,7 @@
             <div class="content-item" id="Cart Pole Pendulum">
                 <div class="content-item-title">Cart-Pole Stabilization - Optimal Control, Simulation, Mechanical Design, Embedded Systems, Manufacturing, Experimental Design</div>
                 <div class="content-item-inner">
-                    <img src="./Media/Projects/cartpole_cover.jpg" alt="CNC Router">
+                    <img src="./Media/Projects/cartpole_cover.jpg" alt="CNC Router" loading="lazy" decoding="async" class="image--preserve">
                     <div class="content-caption">
                         Cart pole pendulum.  
                     </div> 
@@ -140,7 +139,7 @@
             <div class="content-item" id="CNC Router">
                 <div class="content-item-title">CNC Router - Mechanical Design, Electrical Circuits, Manufacturing</div>
                 <div class="content-item-inner">
-                    <img src="./Media/Projects/cnc_router.jpg" loading = "lazy" alt="CNC Router">
+                    <img src="./Media/Projects/cnc_router.jpg" loading="lazy" decoding="async" alt="CNC Router">
                     <div class="content-caption">
                         CNC router with custom aluminum frame and limit switches.  
                     </div> 
@@ -160,7 +159,7 @@
             <div class="content-item" id="Analysis of Fin Separation on Convective Heat Transfer">
                 <div class="content-item-title">Analysis of Fin Separation on Convective Heat Transfer - Mathematical Analysis, Experimental Design, MATLAB, LabView</div>
                 <div class="content-item-inner">
-                    <img src="./Media/Projects/heat_sink_cover.jpg" loading="lazy" alt="heat sink experiment">
+                    <img src="./Media/Projects/heat_sink_cover.jpg" loading="lazy" decoding="async" alt="heat sink experiment">
                     <div class="content-caption">
                         Both iterations of the custom modular heat sink base and fins on the HAAS VF-2 mill.
                     </div>
@@ -177,7 +176,7 @@
             <div class="content-item" id = "MEMS Pressure Sensor">
                 <div class="content-item-title">MEMS Pressure Sensor - Prototyping, Experimental Design, Electrical Circuits, NI DAQ</div>
                 <div class="content-item-inner">
-                    <img src="./Media/Projects/MEMS_pressure_sensor.jpg" loading = "lazy" alt="Pressure Sensor">
+                    <img src="./Media/Projects/MEMS_pressure_sensor.jpg" loading = "lazy" decoding="async" alt="Pressure Sensor">
                     <div class="content-caption">
                         Fully assembled pressure sensor. 
                     </div>
@@ -190,7 +189,7 @@
                             Since strain gauge/Wheatstone bridge readings were diffcult to consistently track on digital multimeters, we built a 
                             LabView virtual instrument to output voltage-time graphs. Experimental results showed a linear trend at pressures of 0.5-1.5psi.
                         </div>
-                        <img src="./Media/Projects/MEMS_plot.png" loading = "lazy" alt="MEMS Plot">
+                        <img src="./Media/Projects/MEMS_plot.png" loading = "lazy" decoding="async" alt="MEMS Plot">
                         <div class="content-caption">
                             Pressure vs Voltage plot showing an initial linear trend followed by a plateau at higher pressures. Sensor calibration factor was
                             determined to be ~24.6mV/psi.
@@ -209,7 +208,7 @@
             <div class="content-item" id = "Energy Generating Shoe Soles">
                 <div class="content-item-title">Energy Generating Shoe Soles</div>
                     <div class="content-item-inner">
-                        <img src="./Media/Projects/talaria.png" loading = "lazy" alt="Talaria">
+                        <img src="./Media/Projects/talaria.png" loading = "lazy" decoding="async" alt="Talaria">
                         <div class="content-caption">
                             3D printed TPU shoe soles embedded with piezoelectric crystals wired up with makeshift lightup shoes.
                         </div>                   
@@ -231,7 +230,7 @@
                 <!-- # makes the item into a link that scrolls to top of page -->
                 <a href="#top" class="footer__anchor" id=""> 
                     <figure class="footer__logo">
-                        <img src="./Media/Professional/NC.png" loading = "lazy" class="footer__logo--img" alt="">
+                        <img src="./Media/Professional/NC.png" loading = "lazy" decoding="async" class="footer__logo--img" alt="">
                     </figure>
                     <span class="footer__logo--popper">
                         Top
@@ -255,6 +254,6 @@
             </div>
         </footer>
         </section>
-        <script src="nav.js"></script>
+    <script src="nav.js" defer></script>
     </body>
 </html>

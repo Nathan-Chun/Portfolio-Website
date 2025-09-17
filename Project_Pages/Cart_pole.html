@@ -14,42 +14,21 @@
         <link rel="favicon-32x32" href="../favicon/favicon-32x32.png">
         <link rel="stylesheet" href="../styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-        <!-- <script type="text/javascript">
-            window.MathJax = {
-                tex: {
-                    inlineMath: [['$', '$'], ['\\(', '\\)']],
-                    displayMath: [['$$', '$$'], ['\\[', '\\]']],
-                    packages: ['base', 'ams']
-                },
-                svg: {
-                    fontCache: 'global'
-                }
-            };
-        </script>
-        <script id="MathJax-script" async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-        </script> -->
-
-        <script type="text/x-mathjax-config">
-            MathJax.Hub.Config({
-                tex2jax: {
-                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-                processEscapes: true
-                }
+        <!-- Defer loading MathJax until after initial load to avoid render-blocking -->
+        <script>
+            window.addEventListener('load', function(){
+                var script = document.createElement('script');
+                script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+                script.async = true;
+                document.head.appendChild(script);
             });
-            </script>
-                
-            <script type="text/javascript"
-                    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-            </script>
+        </script>
     </head>
     <body>
         <a id="top"></a>
         <section>
             <nav>
-                <div class = "personal__logo"><a href="../index.html"><span class="text--color">Nathan Chun | 陳乃誠</span></a></div>
+                <div class = "personal__logo"><a href="../index.html"><span class="text--color">Nathan Chun</span></a></div>
                 <button id="navToggle" class="nav__toggle">&#9776;</button>
                 <ul class="nav__link--list" id = "navLinks">
                     <li class="nav__link">
@@ -218,7 +197,7 @@ end
                         </div> 
                         <p>The final simulation result is shown below where the cart begins at a 35 degree angle.  The cart is also perturbed with a step input at 5s.</p>
                         <div>
-                            <video controls loop muted autoplay>
+                            <video controls muted preload="none">
                                 <source src="../Media/Projects/cartPole_sim.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -254,7 +233,7 @@ end
                             became a primary source of disturbance in the final system, directly impacting performance.
                         </p>
                         <div>
-                            <video controls loop muted autoplay>
+                            <video controls muted preload="none">
                                 <source src="../Media/Projects/cartpole_wobble.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -266,7 +245,7 @@ end
                             Another source of disturbance was the insufficient stiffness at the pole-encoder junction.  The first iteration of the junction was designed as two main sections, which resulted in substantial wiggling as shown below.
                         </p>
                         <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
-                            <video controls loop muted autoplay>
+                            <video controls muted preload="none">
                                 <source src="../Media/Projects/cartpole_junction_wiggle.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -298,7 +277,7 @@ end
                     </div>
 
                     <div>
-                        <video controls loop muted autoplay>
+                        <video controls muted preload="none">
                             <source src="../Media/Projects/cartpole_3d_print.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -312,7 +291,7 @@ end
                        further machining on the Haas VF-2 CNC mill.  I'm grateful to <a href="https://www.linkedin.com/in/cesar-renteria-a609a6249/" class="text-links" target="blank">Cesar Renteria</a>, my Makerspace supervisor, for his guidance and assistance during the CNC programming and setup process.
                     </div>
                     <div>
-                        <video controls loop muted autoplay>
+                        <video controls muted preload="none">
                             <source src="../Media/Projects/cartpole_waterjet.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -392,7 +371,7 @@ end
                        Zero shot deployment of the LQR controller failed to achieve stabilization.  Even after manual gain tuning attempts, the system consistently destabilized within seconds of operation.
                     </div>
                     <div>
-                        <video controls loop muted autoplay>
+                        <video controls muted preload="none">
                             <source src="../Media/Projects/cartpole_trial.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>

@@ -14,17 +14,20 @@
     <link rel="favicon-32x32" href="../favicon/favicon-32x32.png">
     <link rel="stylesheet" href="../styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-        <script id="MathJax-script" async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        <script>
+            window.addEventListener('load', function(){
+                var script = document.createElement('script');
+                script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+                script.async = true;
+                document.head.appendChild(script);
+            });
         </script>
     </head>
     <body>
         <a id="top"></a>
         <section>
             <nav>
-                <div class = "personal__logo"><a href="../index.html"><span class="text--color">Nathan Chun | 陳乃誠</span></a></div>
+                <div class = "personal__logo"><a href="../index.html"><span class="text--color">Nathan Chun</span></a></div>
                 <button id="navToggle" class="nav__toggle">&#9776;</button>
                 <ul class="nav__link--list" id = "navLinks">
                     <li class="nav__link">

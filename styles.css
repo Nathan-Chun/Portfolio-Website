@@ -1,7 +1,7 @@
 /* Base styles */
-/* Font is loaded via a <link> in the HTML head to avoid CSS @import render-blocking */
+/* Use Helvetica where available, with fallbacks to system UI sans-serif fonts */
 * {
-    font-family: 'Lato', Arial, sans-serif;
+    font-family: Courier, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -42,7 +42,7 @@ img, video {
 }
 
 body {
-    background: #fff;
+    background: #f5f1eb;
     color: #242424;
     display: flex;
     flex-direction: column;
@@ -67,12 +67,15 @@ html, body {
 /* Navigation */
 nav {
     height: 90px;
-    width: 100%;
+    width: 50%;
+    margin: 0 auto 0px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 30px;
-    background: #fff;
+    position: relative;
+    z-index: 10001;
+    /* padding: 0 30px; */
+    background: #f5f1eb;
     /* flex-shrink:0; */
     /* box-shadow: 0 2px 8px rgba(0,0,0,0.03); */
 }
@@ -162,7 +165,7 @@ a,
     align-items: center;
     justify-content: center;
     padding: 24px 20px 8px 20px;
-    background: #fff;
+    /* background: #f5f1eb; */
     /* box-shadow: 0 2px 8px rgba(0,0,0,0.03); */
 }
 
@@ -186,14 +189,15 @@ a,
 
 .hero__img {
     width: 100%;
-    max-width: 320px;      /* or your preferred max width */
+    max-width: 200px;      /* or your preferred max width */
     height: auto;          /* maintain aspect ratio */
     object-fit: cover;
     object-position: center 80%;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    /* border-radius: 12px; */
+    /* remove border/shadow to simplify the visual */
+    box-shadow: none;
     margin-bottom: 0;
-    border: 4px solid #e0e0e0;
+    border: none;
 }
 
 .hero__text-block {
@@ -235,14 +239,15 @@ a,
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 8px 20px 120px 20px;
-    background: #fff;
+    padding: 20px 20px 120px 20px;
+    /* background: #f5f1eb; */
     margin-bottom: 0px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    box-shadow: none;
     flex: 1;
 }
 .about__content {
-    max-width: 1000px;
+    padding: 0 12px;
+    max-width: 500px;
     text-align: center;
 }
 .about__content h2 {
@@ -261,6 +266,53 @@ a,
     gap: 18px;
     margin-top: 12px;
     margin-bottom: 0;
+}
+
+/* Intro layout: hero + about side-by-side on wide screens */
+.intro {
+    display: flex;
+    align-items: stretch;       /* make children stretch to equal height */
+    justify-content: center;
+    gap: 40px;
+    margin: 0 auto 48px auto;
+    padding: 100px 24px;
+    min-height: 360px;         /* ensures there's room for spacing of content */
+    max-width: 1000px;
+}
+
+/* Ensure the two intro columns are flex columns that fill the height */
+.intro > .hero,
+.intro > .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    flex: 1 1 auto;
+}
+
+/* Make the content blocks inside fill their column and space items */
+.hero__content,
+.about__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* image at top, links at bottom */
+    height: 100%;
+}
+
+@media (max-width: 900px) {
+    .intro {
+        flex-direction: column;
+        gap: 20px;
+        padding: 12px 12px;
+        min-height: auto; /* allow natural height when stacked */
+    }
+    /* keep each stacked section a minimum height so they feel balanced */
+    .intro > .hero,
+    .intro > .about {
+        min-height: 320px;
+    }
+    .about__content {
+        text-align: center;
+    }
 }
 
 /*Content for Pages*/
@@ -284,9 +336,29 @@ a,
 
 .content-list {
     max-width: 50%;
-    background:#fff;
+    /* background:#fff; */
     margin: 0 auto 48px auto;
     padding: 0 24px;
+}
+
+/* Horizontal divider that matches content width and centers on page */
+.content-divider {
+    width: 50%;               /* default to match .content-list */
+    max-width: calc(100% - 48px);
+    height: 1px;
+    margin: 24px auto;      
+    background-color: rgba(36,36,36,0.12); 
+    
+    /* border: none; */
+    /* box-shadow: 0 1px 0 rgba(255,255,255,0.35) inset, 0 0 6px rgba(36,36,36,0.02); */
+}
+
+/* Make the divider follow content-list widths at breakpoints */
+@media (max-width: 1200px) {
+    .content-divider { width: 70%; }
+}
+@media (max-width: 768px) {
+    .content-divider { width: 90%; }
 }
 
 .content-section-links {
@@ -318,13 +390,6 @@ a,
     flex-direction: column; /* Stack title, image, and content vertically */
     gap: 0;
     align-items: stretch;   /* Make children take full width */
-}
-.content-item img {
-    width: 80%;
-    height: 60%;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
 .content-caption {
@@ -363,7 +428,7 @@ a,
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #fff;
+    /* background: #fff; */
     border-radius: 0 0 8px 8px;
     max-width: 1200px;      /* Set your preferred card width */
     margin: 0 auto;        /* Center the card */
@@ -398,10 +463,10 @@ a,
     /* max-height: 500px; */
     object-fit: contain;
     object-position: 50% 50%;
-    border-radius: 12px; /* rectangle with slightly rounded corners */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    /* border-radius: 12px; */
+    /* box-shadow: 0 2px 8px rgba(0,0,0,0.08); */
     margin-bottom: 0;
-    border: 4px solid #e0e0e0;
+    /* border: 4px solid #e0e0e0; */
     /* padding: 20px 20px 20px 20px; */
 }
 .content-item-inner video {
@@ -411,10 +476,10 @@ a,
     /* max-height: 500px; */
     object-fit: contain;
     object-position: 50% 50%;
-    border-radius: 12px; /* rectangle with slightly rounded corners */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    /* border-radius: 12px;  */
+    /* box-shadow: 0 2px 8px rgba(0,0,0,0.08); */
     margin-bottom: 0;
-    border: 4px solid #e0e0e0;
+    /* border: 4px solid #e0e0e0; */
     /* padding: 20px 20px 20px 20px; */
 }
 
@@ -425,8 +490,8 @@ a,
     object-position: center;   /* Center the crop */
     display: block;
     margin: 18px auto 8px auto;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    /* border-radius: 10px; */
+    /* box-shadow: 0 2px 8px rgba(0,0,0,0.08); */
 }
 
 .center-math {
@@ -446,35 +511,32 @@ a,
     /* height:100; */
     /* flex-grow:1; */
     /* max-width:900px; */
-    justify-content: center;
     align-items: center;
     /* margin: 0 auto; */
     /* width:100;; */
     margin: 32px 0;
 }
 
-
-
 .pdf-title {
     text-align: center;
     font-size: 2rem;
-    margin: 24px 0 12px 0;
+    margin: 10px 0 12px 0;
 }
 .pdf-section {
-    background: #fff;
+    /* background: #fff; */
     /* flex-grow: 1; */
     /* display: flex; */
     /* flex-direction:column; */
     border-radius: 16px;
     max-width: 900px;
     margin: 0px auto 48px auto;
-    padding: 32px 24px;
+    padding: 24px 24px;
 }
 
 /* Footer */
 footer {
-    background-color: #242424;
-    color: #fff;
+    /* background-color: #242424; */
+    /* color: #fff; */
     padding: 24px 0 12px 0;
     text-align: center;
     margin-top: auto;
@@ -497,13 +559,13 @@ footer {
 }
 
 /* Slightly smaller logo on very small screens */
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
     .footer__logo--img,
     .footer__logo--img.image--preserve {
         width: 32px !important;
         height: 32px !important;
     }
-}
+} */
 
 .footer__anchor:focus{
     outline: none;
@@ -563,7 +625,7 @@ footer {
 }
 
 .footer__social--link {
-    color: #fff;
+    color: #242424;
     font-size: 1.1rem;
     text-decoration: none;
     /* transition: color 0.2s; */
@@ -573,16 +635,17 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+@media (max-width: 1250px) {
     .hero__content {
         flex-direction: column;
         gap: 24px;
     }
     .hero__img {
         width: 90vw;
-        max-width: 320px;
+        max-width: 200px;
         height: auto;
     }
+
     .nav__toggle{
         display:block;
         background:none;
@@ -598,31 +661,60 @@ footer {
     .nav__link a{
         display: block;
         padding: 0.75rem 1.25rem;
-        color: #333;                 /* Adjust text color */
+        /* color: #333;                 Adjust text color */
         text-decoration: none;
         transition: background-color 0.3s ease;
     }
 
     .nav__link a:hover {
-        background-color: rgba(0, 0, 0, 0.1); /* Slight hover highlight */
+        /* background-color: rgba(0, 0, 0, 0.1); Slight hover highlight */
         border-radius: 4px;
     }
 
+    /* Slide-in full-screen menu (right -> left) */
     .nav__link--list{
-        display: none;
+        display: flex; /* keep in DOM; hide visually with translateX */
         flex-direction: column;
-        position: absolute;
-        top: 90px;
-        /* left: 0; */
-        right: 0px;
-        bottom:0;
-        width: 200px;
-        padding: 12px;
-        border-radius: 8px;
-        background: rgba(255, 255, 255, 0.85);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);   
-        z-index: 1000; 
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 100vw;
+        transform: translateX(100%); /* start off-screen to the right */
+        transition: transform 320ms ease;
+    padding-top: 90px; /* leave space for the nav bar */
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 24px;
+        border-radius: 0;
+        background: rgba(255, 255, 255, 0.99);
+        backdrop-filter: none;
+        box-shadow: none;
+        z-index: 10000; /* sit on top of page content */
+        overflow-y: auto; /* allow scrolling if content is tall */
+    }
+    /* dim content behind the menu using a pseudo-element inside the menu container */
+    .nav__link--list::before{
+        content: '';
+        position: fixed;
+        inset: 0;
+        /* background: rgba(0,0,0,0.35); */
+        z-index: -1; /* behind the menu content but above page */
+        pointer-events: none;
+    }
+    /* active state: slide in to cover viewport */
+    .nav__link--list.active {
+        transform: translateX(0);
+    }
+
+    /* Improve spacing for menu links when full-screen */
+    .nav__link--list .nav__link {
+        margin: 0.5rem 0;
+    }
+    .nav__link--list .nav__link a {
+        display: block;
+        padding: 16px 12px;
+        font-size: 1.15rem;
     }
     .pdf-container{
         width: 500px;

@@ -458,7 +458,7 @@ a,
 
 .content-item img {
     width: 100%;
-    max-width: 400px;
+    max-width: 50%;
     height: 100%;
     /* max-height: 500px; */
     object-fit: contain;
@@ -471,7 +471,7 @@ a,
 }
 .content-item-inner video {
     width: 100%;
-    max-width: 400px;
+    max-width: 50%;
     height: 100%;
     /* max-height: 500px; */
     object-fit: contain;
@@ -621,7 +621,7 @@ footer {
     display: flex;
     gap: 50px;
     justify-content: center;
-    margin-bottom: 8px;
+    margin-bottom: 20px;
 }
 
 .footer__social--link {
@@ -732,4 +732,47 @@ footer {
         max-width: 90%;
         padding: 0 16px;
     }
+    .footer__social--list {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
 }
+
+/* Safety rules for very small screens to prevent horizontal overflow */
+/* @media (max-width: 480px) {
+    .content-list,
+    .content-item,
+    .content-item-inner,
+    .content-item-content {
+        box-sizing: border-box;
+        max-width: 100%;
+        padding-left: 12px;
+        padding-right: 12px;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: visible;
+    } */
+
+    /* Ensure images never exceed their container and keep aspect ratio */
+    /* .content-item img,
+    .content-item-inner img,
+    .content-item-inner video {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+        display: block;
+    } */
+
+    /* Force long words/URLs to wrap instead of causing horizontal scroll */
+    /* .content-item-desc,
+    .content-item-title,
+    .content-caption,
+    .content-section-links,
+    .content-section-links li {
+        word-break: break-word;
+        overflow-wrap: anywhere;
+    }
+} */

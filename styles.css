@@ -528,7 +528,8 @@ a,
     /* display: flex; */
     /* flex-direction:column; */
     border-radius: 16px;
-    max-width: 900px;
+    /* max-width: 900px; */
+    max-width: 80%;
     margin: 0px auto 48px auto;
     padding: 24px 24px;
 }
@@ -724,6 +725,19 @@ footer {
 @media (max-width: 1200px) {
     .content-list {
         max-width: 70%;
+    }
+    
+}
+
+@media(max-width: 1000px){
+    .content-item img {
+    width: 100%;
+    max-width: 80%;
+
+    }
+    .content-item-inner video {
+        width: 100%;
+        max-width: 80%;
     }
 }
 

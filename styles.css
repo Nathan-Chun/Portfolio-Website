@@ -42,7 +42,8 @@ img, video {
 }
 
 body {
-    background: #f5f1eb;
+    /* background: #f5f1eb; */
+    background: #fff;
     color: #242424;
     display: flex;
     flex-direction: column;
@@ -75,7 +76,7 @@ nav {
     position: relative;
     z-index: 10001;
     /* padding: 0 30px; */
-    background: #f5f1eb;
+    /* background: #f5f1eb; */
     /* flex-shrink:0; */
     /* box-shadow: 0 2px 8px rgba(0,0,0,0.03); */
 }
